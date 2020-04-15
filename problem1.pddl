@@ -13,6 +13,7 @@
     (= (resources-stored painkillers Strand) 50)
 
     (at William Strand)
+    (available William)
     (usingTransport William walking)
     (= (capacity William walking) 10)
     (= (capacity William cycling) 6)
@@ -25,8 +26,8 @@
     (linked Strand Raff)
     (linked Raff Strand)
     (= (time-to-arrive Strand Raff walking) 5)
-    (= (time-to-arrive Strand Raff cycling) 3)
     (= (time-to-arrive Raff Strand walking) 5)
+    (= (time-to-arrive Strand Raff cycling) 3)
     (= (time-to-arrive Raff Strand cycling) 3)
     (= (requires Raff egg) 2)
     (= (requires Raff painkillers) 1)
@@ -34,8 +35,8 @@
     (linked Strand Ben)
     (linked Ben Strand)
     (= (time-to-arrive Strand Ben walking) 9)
-    (= (time-to-arrive Strand Ben cycling) 6)
     (= (time-to-arrive Ben Strand walking) 9)
+    (= (time-to-arrive Strand Ben cycling) 6)
     (= (time-to-arrive Ben Strand cycling) 6)
     (= (requires Ben egg) 1)
     (= (requires Ben painkillers) 6)
@@ -51,3 +52,4 @@
 ;un-comment the following line if metric is needed
 ;(:metric minimize (???))
 )
+
