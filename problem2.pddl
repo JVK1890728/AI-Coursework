@@ -9,11 +9,17 @@
 
 (:init
     ;todo: put the initial state's facts and numeric values here
+    (= (resource-size egg) 3)
+    (= (resource-size painkillers) 1)
+
     (= (resources-stored egg Strand) 100)
     (= (resources-stored painkillers Strand) 50)
-
     (= (resources-stored egg Waterloo) 10)
     (= (resources-stored painkillers Waterloo) 5)
+    (= (resources-stored egg Dan) 0)
+    (= (resources-stored painkillers Dan) 0)
+    (= (resources-stored egg William) 0)
+    (= (resources-stored painkillers William) 0)
 
     (at William Strand)
     (at Dan Strand)
@@ -26,39 +32,32 @@
     (= (capacity William cycling) 6)
     (= (capacity Dan walking) 10)
     (= (capacity Dan cycling) 6)
-    (= (resources-stored egg Dan) 0)
-    (= (resources-stored painkillers Dan) 0)
-    (= (resources-stored egg William) 0)
-    (= (resources-stored painkillers William) 0)
-
-    (= (resource-size egg) 3)
-    (= (resource-size painkillers) 1)
 
     (linked Strand Raff)
     (linked Raff Strand)
-    (= (time-to-arrive Strand Raff walking) 5)
-    (= (time-to-arrive Strand Raff cycling) 3)
-    (= (requires Raff egg) 2)
-    (= (requires Raff painkillers) 1)
-    
     (linked Strand Ben)
     (linked Ben Strand)
-    (= (time-to-arrive Strand Raff walking) 9)
-    (= (time-to-arrive Strand Raff cycling) 6)
-    (= (requires Ben egg) 1)
-    (= (requires Ben painkillers) 6)
-    
     (linked Waterloo Giulio)
     (linked Giulio Waterloo)
+    (linked Waterloo Strand)
+    (linked Strand Waterloo)
+    
+    (= (time-to-arrive Strand Raff walking) 5)
+    (= (time-to-arrive Strand Raff cycling) 3)
+    (= (time-to-arrive Strand Ben walking) 9)
+    (= (time-to-arrive Strand Ben cycling) 6)
     (= (time-to-arrive Waterloo Giulio walking) 9)
     (= (time-to-arrive Waterloo Giulio cycling) 6)
+    (= (time-to-arrive Waterloo Strand walking) 20)
+    (= (time-to-arrive Waterloo Strand cycling) 7)
+    
+    (= (requires Raff egg) 2)
+    (= (requires Raff painkillers) 1)
+    (= (requires Ben egg) 1)
+    (= (requires Ben painkillers) 6)
     (= (requires Giulio egg) 4)
     (= (requires Giulio painkillers) 8)
 
-    (linked Waterloo Strand)
-    (linked Strand Waterloo)
-    (= (time-to-arrive Waterloo Strand walking) 20)
-    (= (time-to-arrive Waterloo Strand cycling) 7)
 )
 
 (:goal (and
