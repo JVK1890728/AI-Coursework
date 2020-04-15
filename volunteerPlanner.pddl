@@ -47,14 +47,14 @@
         (at start (usingTransport ?v ?m))
         (at start (>= (capacity ?v ?m) (resource-size ?r)))
         (at start (>= (resources-stored ?r ?d) 1))
-        ;(at start (available ?v))
+        (at start (available ?v))
     )
     :effect (and
-        ;(at start (not (available ?v)))
+        (at start (not (available ?v)))
         (at end (decrease (resources-stored ?r ?d) 1))
         (at end (increase (resources-stored ?r ?v) 1))
         (at end (decrease (capacity ?v ?m) (resource-size ?r)))
-        ;(at end (available ?v))
+        (at end (available ?v))
     )
 )
 
@@ -65,11 +65,14 @@
         (at start (at ?v ?p))
         (at start (usingTransport ?v ?m))
         (at start (>= (resources-stored ?r ?v) 1))
+        (at start (available ?v))
     )
     :effect (and
+        (at start (not (available ?v)))
         (at end (decrease (resources-stored ?r ?v) 1))
         (at end (decrease (requires ?p ?r) 1))
         (at end (increase (capacity ?v ?m) (resource-size ?r)))
+        (at end (available ?v))
     )
 )
 
@@ -80,16 +83,21 @@
         (at start (at ?v ?from))
         (at start (usingTransport ?v ?mode))
         (at start (linked ?from ?to))
+        (at start (available ?v))
     )
     :effect (and
+        (at start (not (available ?v)))
         (at end (not (at ?v ?from)))
         (at end (at ?v ?to))
+        (at end (available ?v))
     )
 )
 
 (:durative-action TRANSFER-RESOURCE
     :parameters (?v1 ?v2 - volunteer ?m1 ?m2 - modeOfTravel ?r - resource ?l - locatable)
-    :duration (= ?duration 0.6) ;might be a good idea to make this take longer than getting it from a depo, iunno
+    ; might be a good idea to make this take
+    ; longer than getting it from a depot, iunno
+    :duration (= ?duration 0.6)
     :condition (and
         (at start (>= (resources-stored ?r ?v1) 1))
         (at start (>= (capacity ?v2 ?m2) (resource-size ?r)))
@@ -104,7 +112,7 @@
         (at end (decrease (resources-stored ?r ?v1) 1))
         (at end (increase (capacity ?v1 ?m1) (resource-size ?r)))
         (at end (increase (resources-stored ?r ?v2) 1))
-        (at end (decreate (capacity ?v2 ?m2) (resource-size ?r)))
+        (at end (decrease (capacity ?v2 ?m2) (resource-size ?r)))
         (at end (available ?v1))
         (at end (available ?v2))
     )
