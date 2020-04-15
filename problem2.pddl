@@ -20,13 +20,16 @@
     (available William)
     (available Dan)
     (usingTransport William walking)
-    (usingTransport Dan cycling)
+    (usingTransport Dan walking)
+
     (= (capacity William walking) 10)
     (= (capacity William cycling) 6)
     (= (capacity Dan walking) 10)
     (= (capacity Dan cycling) 6)
     (= (resources-stored egg Dan) 0)
     (= (resources-stored painkillers Dan) 0)
+    (= (resources-stored egg William) 0)
+    (= (resources-stored painkillers William) 0)
 
     (= (resource-size egg) 3)
     (= (resource-size painkillers) 1)
@@ -47,8 +50,8 @@
     
     (linked Waterloo Giulio)
     (linked Giulio Waterloo)
-    (= (time-to-arrive Strand Raff walking) 9)
-    (= (time-to-arrive Strand Raff cycling) 6)
+    (= (time-to-arrive Waterloo Giulio walking) 9)
+    (= (time-to-arrive Waterloo Giulio cycling) 6)
     (= (requires Giulio egg) 4)
     (= (requires Giulio painkillers) 8)
 
