@@ -87,4 +87,27 @@
     )
 )
 
+(:durative-action TRANSFER-RESOURCE
+    :parameters (?v1 ?v2 - volunteer ?m1 ?m2 - modeOfTravel ?r - resource ?l - locatable)
+    :duration (= ?duration 0.6) ;might be a good idea to make this take longer than getting it from a depo, iunno
+    :condition (and
+        (at start (>= (resources-stored ?r ?v1) 1))
+        (at start (>= (capacity ?v2 ?m2) (resource-size ?r)))
+        (at start (at ?v1 ?l))
+        (at start (at ?v2 ?l))
+        (at start (available ?v1))
+        (at start (available ?v2))
+    )
+    :effect (and
+        (at start (not (available ?v1)))
+        (at start (not (available ?v2)))
+        (at end (decrease (resources-stored ?r ?v1) 1))
+        (at end (increase (capacity ?v1 ?m1) (resource-size ?r)))
+        (at end (increase (resources-stored ?r ?v2) 1))
+        (at end (decreate (capacity ?v2 ?m2) (resource-size ?r)))
+        (at end (available ?v1))
+        (at end (available ?v2))
+    )
+)
+
 )
