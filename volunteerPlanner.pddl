@@ -23,7 +23,6 @@
     (available ?v - volunteer)
     (walk ?v - volunteer) 
     (satisfied ?p - atRiskPerson)
-    (available ?v - volunteer)
     (full ?v - volunteer)
     (emptyVolunteer ?v - volunteer)
     (emptyDepot ?d - depot)
