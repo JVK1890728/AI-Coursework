@@ -4,13 +4,13 @@
 
 ;remove requirements that are not needed
 ; TODO remove unutilised types
-(:requirements :strips :fluents :durative-actions :timed-initial-literals :typing :conditional-effects :negative-preconditions :duration-inequalities :equality)
+(:requirements :fluents :durative-actions :typing :duration-inequalities :equality)
 
 (:types ;todo: enumerate types and their hierarchy here, e.g. car truck bus - vehicle
     locatable - object
     volunteer atRiskPerson depot - locatable
-    walk bicycle - modeOfTravel
-    resource 
+    modeOfTravel
+    resource
 )
 
 ; un-comment following line if constants are needed
@@ -20,7 +20,7 @@
     (at ?obj - locatable ?l - locatable)
     (linked ?l1 ?l2 - locatable)
     (usingTransport ?v - volunteer ?m - modeOfTravel)
-    (walk ?v - volunteer)
+    (walk ?v - volunteer) 
     (satisfied ?p - atRiskPerson)
     (available ?v - volunteer)
     (full ?v - volunteer)
@@ -79,6 +79,7 @@
     :condition (and
         (at start (at ?v ?from))
         (at start (usingTransport ?v ?mode))
+        (at start (linked ?from ?to))
     )
     :effect (and
         (at end (not (at ?v ?from)))
