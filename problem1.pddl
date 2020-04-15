@@ -16,17 +16,21 @@
     (usingTransport William walking)
     (= (capacity William walking) 10)
     (= (capacity William cycling) 6)
+    (= (resources-stored egg William) 0)
+    (= (resources-stored painkillers William) 0)
 
     (= (resource-size egg) 3)
     (= (resource-size painkillers) 1)
 
     (linked Strand Raff)
+    (linked Raff Strand)
     (= (time-to-arrive Strand Raff walking) 5)
     (= (time-to-arrive Strand Raff cycling) 3)
     (= (requires Raff egg) 2)
     (= (requires Raff painkillers) 1)
     
     (linked Strand Ben)
+    (linked Ben Strand)
     (= (time-to-arrive Strand Raff walking) 9)
     (= (time-to-arrive Strand Raff cycling) 6)
     (= (requires Ben egg) 1)
