@@ -13,6 +13,7 @@
     (= (resources-stored painkillers Strand) 50)
 
     (at William Strand)
+    (available William)
     (usingTransport William walking)
     (= (capacity William walking) 10)
     (= (capacity William cycling) 6)
@@ -47,3 +48,4 @@
 ;un-comment the following line if metric is needed
 ;(:metric minimize (???))
 )
+
