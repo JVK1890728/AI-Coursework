@@ -99,12 +99,14 @@
     ; longer than getting it from a depot, iunno
     :duration (= ?duration 0.6)
     :condition (and
-        (at start (>= (resources-stored ?r ?v1) 1))
-        (at start (>= (capacity ?v2 ?m2) (resource-size ?r)))
-        (at start (at ?v1 ?l))
-        (at start (at ?v2 ?l))
         (at start (available ?v1))
         (at start (available ?v2))
+        (at start (at ?v1 ?l))
+        (at start (at ?v2 ?l))
+        (at start (usingTransport ?v1 ?m1))
+        (at start (usingTransport ?v2 ?m2))
+        (at start (>= (resources-stored ?r ?v1) 1))
+        (at start (>= (capacity ?v2 ?m2) (resource-size ?r)))
     )
     :effect (and
         (at start (not (available ?v1)))
