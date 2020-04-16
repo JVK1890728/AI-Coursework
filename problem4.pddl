@@ -31,6 +31,8 @@
     (usingTransport vDan walking)
     (= (capacity vWilliam walking) 10)
     (= (capacity vDan walking) 10)
+    (= (activePeriod vDan) 100)
+    (= (activePeriod vWilliam) 100)
 
     ; depot links
     (linked dWaterloo dStrand)
@@ -212,5 +214,4 @@
     (= (requires arAgi egg) 0)
     (= (requires arAgi painkillers) 0)
 ))
-
 )
