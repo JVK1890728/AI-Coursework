@@ -72,6 +72,12 @@
     (= (time-to-arrive arJay dStrand cycling) 25)
     (= (time-to-arrive dStrand arJay driving) 15)
     (= (time-to-arrive arJay dStrand driving) 15)
+    (= (time-to-arrive dWaterloo arJay walking) 25)
+    (= (time-to-arrive arJay dWaterloo walking) 25)
+    (= (time-to-arrive dWaterloo arJay cycling) 20)
+    (= (time-to-arrive arJay dWaterloo cycling) 20)
+    (= (time-to-arrive dWaterloo arJay driving) 12)
+    (= (time-to-arrive arJay dWaterloo driving) 12)
 
     (= (time-to-arrive dWaterloo dStrand walking) 20)
     (= (time-to-arrive dStrand dWaterloo walking) 20)
@@ -89,8 +95,8 @@
     (= (requires arBen painkillers) 6)
     (= (requires arGiulio egg) 4)
     (= (requires arGiulio painkillers) 8)
-    (= (requires arJay egg) 6)
-    (= (requires arJay painkillers) 10)
+    (= (requires arJay egg) 5)
+    (= (requires arJay painkillers) 5)
 
 )
 
