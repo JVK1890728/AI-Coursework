@@ -82,7 +82,7 @@
 )
 
 (:durative-action TRAVEL
-    :parameters (?v - volunteer ?to ?from - locatable, ?mode - modeOfTravel)
+    :parameters (?v - volunteer ?from ?to - locatable, ?mode - modeOfTravel)
     :duration (= ?duration (time-to-arrive ?from ?to ?mode))
     :condition (and
         (at start (> (activePeriod ?v) (time-to-arrive ?from ?to ?mode)))
