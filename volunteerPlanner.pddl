@@ -135,7 +135,7 @@
     :parameters (?v - volunteer)
     :duration (= ?duration 10)
     :condition (and 
-        (at start (= (activePeriod ?v) 0)) 
+        (at start (< (activePeriod ?v) 3)) 
         (at start (available ?v))
     )
     :effect (and 
