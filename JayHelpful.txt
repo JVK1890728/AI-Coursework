@@ -15,3 +15,5 @@ PROBLEM 4
 
 PROBLEM 5
 ./optic-cplex /home/k1890728/Documents/00-Year-2/AI-Coursework/volunteerPlanner.pddl /home/k1890728/Documents/00-Year-2/AI-Coursework/problem5.pddl > /home/k1890728/Documents/00-Year-2/AI-Coursework/problem1.plan
+
+NZedtTg
