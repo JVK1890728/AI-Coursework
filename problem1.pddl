@@ -1,52 +1,52 @@
 (define (problem basic_problem) (:domain volunteerPlanner)
 (:objects
-    William - volunteer
-    Raff Ben - atRiskPerson
-    Strand - depot
+    vWilliam - volunteer
+    arRaff arBen - atRiskPerson
+    dStrand - depot
     egg painkillers - resource
     walking cycling - modeOfTravel
 )
 
 (:init
     ;todo: put the initial state's facts and numeric values here
-    (= (resources-stored egg Strand) 100)
-    (= (resources-stored painkillers Strand) 50)
+    (= (resources-stored egg dStrand) 100)
+    (= (resources-stored painkillers dStrand) 50)
 
-    (at William Strand)
-    (available William)
-    (usingTransport William walking)
-    (= (capacity William walking) 10)
-    (= (capacity William cycling) 6)
-    (= (resources-stored egg William) 0)
-    (= (resources-stored painkillers William) 0)
+    (at vWilliam dStrand)
+    (available vWilliam)
+    (usingTransport vWilliam walking)
+    (= (capacity vWilliam walking) 10)
+    (= (capacity vWilliam cycling) 6)
+    (= (resources-stored egg vWilliam) 0)
+    (= (resources-stored painkillers vWilliam) 0)
 
-    (= (resource-size egg) 3)
-    (= (resource-size painkillers) 1)
+    (= (resource-size egg) 0.2)
+    (= (resource-size painkillers) 0.4)
 
-    (linked Strand Raff)
-    (linked Raff Strand)
-    (= (time-to-arrive Strand Raff walking) 5)
-    (= (time-to-arrive Raff Strand walking) 5)
-    (= (time-to-arrive Strand Raff cycling) 3)
-    (= (time-to-arrive Raff Strand cycling) 3)
-    (= (requires Raff egg) 2)
-    (= (requires Raff painkillers) 1)
+    (linked dStrand arRaff)
+    (linked arRaff dStrand)
+    (= (time-to-arrive dStrand arRaff walking) 10)
+    (= (time-to-arrive arRaff dStrand walking) 10)
+    (= (time-to-arrive dStrand arRaff cycling) 3)
+    (= (time-to-arrive arRaff dStrand cycling) 3)
+    (= (requires arRaff egg) 2)
+    (= (requires arRaff painkillers) 1)
     
-    (linked Strand Ben)
-    (linked Ben Strand)
-    (= (time-to-arrive Strand Ben walking) 9)
-    (= (time-to-arrive Ben Strand walking) 9)
-    (= (time-to-arrive Strand Ben cycling) 6)
-    (= (time-to-arrive Ben Strand cycling) 6)
-    (= (requires Ben egg) 1)
-    (= (requires Ben painkillers) 6)
+    (linked dStrand arBen)
+    (linked arBen dStrand)
+    (= (time-to-arrive dStrand arBen walking) 6)
+    (= (time-to-arrive arBen dStrand walking) 6)
+    (= (time-to-arrive dStrand arBen cycling) 2)
+    (= (time-to-arrive arBen dStrand cycling) 2)
+    (= (requires arBen egg) 1)
+    (= (requires arBen painkillers) 6)
 )
 
 (:goal (and
-    (= (requires Ben egg) 0)
-    (= (requires Ben painkillers) 0)
-    (= (requires Raff egg) 0)
-    (= (requires Raff painkillers) 0)
+    (= (requires arBen egg) 0)
+    (= (requires arBen painkillers) 0)
+    (= (requires arRaff egg) 0)
+    (= (requires arRaff painkillers) 0)
 ))
 
 ;un-comment the following line if metric is needed
