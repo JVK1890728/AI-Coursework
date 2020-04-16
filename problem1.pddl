@@ -13,6 +13,7 @@
     (= (resources-stored painkillers dStrand) 50)
 
     (at vWilliam dStrand)
+    (= (activePeriod vWilliam) 100)
     (available vWilliam)
     (usingTransport vWilliam walking)
     (= (capacity vWilliam walking) 10)
