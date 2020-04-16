@@ -36,16 +36,16 @@
     (resources-stored ?r - resource ?obj - locatable)
     (capacity ?v -volunteer ?mode - modeOfTravel)
     (resource-size ?r - resource)
- (activePeriod ?v - volunteer)
+    (activePeriod ?v - volunteer)
 )
 
 ;define actions here
 (:durative-action PICK-UP-RESOURCE
     :parameters (?v - volunteer ?m - modeOfTravel ?r - resource ?d - depot)
-    :duration (= ?duration 0.3)
+    :duration (= ?duration 0.2)
     :condition (and 
         (at start (at ?v ?d))
-        (at start (> (activePeriod ?v) 0.3))
+        (at start (> (activePeriod ?v) 0.2))
         (at start (usingTransport ?v ?m))
         (at start (>= (capacity ?v ?m) (resource-size ?r)))
         (at start (>= (resources-stored ?r ?d) 1))
@@ -53,7 +53,7 @@
     )
     :effect (and
         (at start (not (available ?v)))
-        (at end (decrease (activePeriod ?v) 0.3))
+        (at end (decrease (activePeriod ?v) 0.2))
         (at end (decrease (resources-stored ?r ?d) 1))
         (at end (increase (resources-stored ?r ?v) 1))
         (at end (decrease (capacity ?v ?m) (resource-size ?r)))
@@ -63,17 +63,17 @@
 
 (:durative-action DELIVER-RESOURCE
     :parameters (?v - volunteer ?m - modeOfTravel ?r - resource ?p - atRiskPerson)
-    :duration (= ?duration 0.3)
+    :duration (= ?duration 0.2)
     :condition (and
         (at start (at ?v ?p))
-        (at start (> (activePeriod ?v) 0.3))
+        (at start (> (activePeriod ?v) 0.2))
         (at start (usingTransport ?v ?m))
         (at start (>= (resources-stored ?r ?v) 1))
         (at start (available ?v))
     )
     :effect (and
         (at start (not (available ?v)))
-        (at end (decrease (activePeriod ?v) 0.3))
+        (at end (decrease (activePeriod ?v) 0.2))
         (at end (decrease (resources-stored ?r ?v) 1))
         (at end (decrease (requires ?p ?r) 1))
         (at end (increase (capacity ?v ?m) (resource-size ?r)))
@@ -104,12 +104,12 @@
     :parameters (?v1 ?v2 - volunteer ?m1 ?m2 - modeOfTravel ?r - resource ?l - locatable)
     ; might be a good idea to make this take
     ; longer than getting it from a depot, iunno
-    :duration (= ?duration 0.6)
+    :duration (= ?duration 0.4)
     :condition (and
         (at start (available ?v1))
-        (at start (> (activePeriod ?v1) 0.6))
+        (at start (> (activePeriod ?v1) 0.4))
         (at start (available ?v2))
-        (at start (> (activePeriod ?v2) 0.6))
+        (at start (> (activePeriod ?v2) 0.4))
         (at start (at ?v1 ?l))
         (at start (at ?v2 ?l))
         (at start (usingTransport ?v1 ?m1))
@@ -119,9 +119,9 @@
     )
     :effect (and
         (at start (not (available ?v1)))
-        (at end (decrease (activePeriod ?v1) 0.6))
+        (at end (decrease (activePeriod ?v1) 0.4))
         (at start (not (available ?v2)))
-        (at end (decrease (activePeriod ?v2) 0.6))
+        (at end (decrease (activePeriod ?v2) 0.4))
         (at end (decrease (resources-stored ?r ?v1) 1))
         (at end (increase (capacity ?v1 ?m1) (resource-size ?r)))
         (at end (increase (resources-stored ?r ?v2) 1))
