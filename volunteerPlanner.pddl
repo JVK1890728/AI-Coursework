@@ -142,5 +142,6 @@
         (at start (not (available ?v)))
         (at end (increase (activePeriod ?v) 80))
         (at end (available ?v))
-        )
+    )
+)
 )
