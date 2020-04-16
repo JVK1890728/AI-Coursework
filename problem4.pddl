@@ -3,7 +3,7 @@
     vWilliam, vDan - volunteer
     arRaff arBen arGiulio - atRiskPerson
     arSeb arJeffrey arZak arJay - atRiskPerson
-    arKolling arColes arKeppens arMagi - atRiskPerson
+    arKolling arColes arKeppens arAgi - atRiskPerson
     dStrand dWaterloo - depot
     egg painkillers - resource
     walking cycling - modeOfTravel
@@ -49,7 +49,7 @@
     (= (requires arGiulio egg) 4)
     (= (requires arGiulio painkillers) 8)
 
-    ; cluster 1 links and distances 
+    ; cluster 1 links
     (linked dStrand arRaff)
     (linked arRaff dStrand)
     (= (time-to-arrive dStrand arRaff walking) 10)
@@ -77,7 +77,6 @@
     
     ; cluster 2
     ; cluster 2 requirements
-    arSeb arJeffrey arZak arJay - atRiskPerson
     (= (requires arSeb egg) 2)
     (= (requires arSeb painkillers) 1)
     (= (requires arJeffrey egg) 1)
@@ -87,7 +86,7 @@
     (= (requires arJay egg) 2)
     (= (requires arJay painkillers) 3)
     
-    ; cluster 2 links and distances 
+    ; cluster 2 links
     (linked dStrand arSeb)
     (linked arSeb dStrand)
     (= (time-to-arrive dStrand arSeb walking) 10)
@@ -129,13 +128,90 @@
     (= (time-to-arrive arJay arZak walking) 1)
     (= (time-to-arrive arZak arJay walking) 1)
 
-    ; TODO cluster 3
+    ; cluster 3
+    ; cluster 3 requirements
+    arKolling arColes arKeppens arAgi - atRiskPerson
+    (= (requires arKolling egg) 2)
+    (= (requires arKolling painkillers) 1)
+    (= (requires arColes egg) 1)
+    (= (requires arColes painkillers) 6)
+    (= (requires arKeppens egg) 4)
+    (= (requires arKeppens painkillers) 8)
+    (= (requires arAgi egg) 4)
+    (= (requires arAgi painkillers) 8)
+
+    ; cluster 3 links
+    (linked dStrand arKolling)
+    (linked arKolling dStrand)
+    (= (time-to-arrive dStrand arKolling walking) 10)
+    (= (time-to-arrive arKolling dStrand walking) 10)
+    (linked dStrand arColes)
+    (linked arColes dStrand)
+    (= (time-to-arrive dStrand arColes walking) 11)
+    (= (time-to-arrive arColes dStrand walking) 11)
+    (linked dStrand arKeppens)
+    (linked arKeppens dStrand)
+    (= (time-to-arrive dStrand arKeppens walking) 12)
+    (= (time-to-arrive arKeppens dStrand walking) 12)
+    (linked dStrand arAgi)
+    (linked arAgi dStrand)
+    (= (time-to-arrive dStrand arAgi walking) 12)
+    (= (time-to-arrive arAgi dStrand walking) 12)
+    (linked arKolling arColes)
+    (linked arColes arKolling)
+    (= (time-to-arrive arKolling arColes walking) 1)
+    (= (time-to-arrive arColes arKolling walking) 1)
+    (linked arKolling arKeppens)
+    (linked arKeppens arKolling)
+    (= (time-to-arrive arKolling arKeppens walking) 1)
+    (= (time-to-arrive arKeppens arKolling walking) 1)
+    (linked arKolling arAgi)
+    (linked arAgi arKolling)
+    (= (time-to-arrive arKolling arAgi walking) 1)
+    (= (time-to-arrive arAgi arKolling walking) 1)
+    (linked arKeppens arColes)
+    (linked arColes arKeppens)
+    (= (time-to-arrive arKeppens arColes walking) 1)
+    (= (time-to-arrive arColes arKeppens walking) 1)
+    (linked arAgi arColes)
+    (linked arColes arAgi )
+    (= (time-to-arrive arAgi arColes walking) 1)
+    (= (time-to-arrive arColes arAgi walking) 1)
+    (linked arAgi arKeppens)
+    (linked arKeppens arAgi)
+    (= (time-to-arrive arAgi arKeppens walking) 1)
+    (= (time-to-arrive arKeppens arAgi walking) 1)
+
 )
 
 (:goal (and
-    ;todo: put the goal condition here
+    ; cluster 1
+    (= (requires arBen egg) 0)
+    (= (requires arBen painkillers) 0)
+    (= (requires arRaff egg) 0)
+    (= (requires arRaff painkillers) 0)
+    (= (requires arGiulio egg) 0)
+    (= (requires arGiulio painkillers) 0)
+
+    ; cluster 2
+    (= (requires arSeb egg) 0)
+    (= (requires arSeb painkillers) 0)
+    (= (requires arJeffrey egg) 0)
+    (= (requires arJeffrey painkillers) 0)
+    (= (requires arZak egg) 0)
+    (= (requires arZak painkillers) 0)
+    (= (requires arJay egg) 0)
+    (= (requires arJay painkillers) 0)
+
+    ; cluster 3
+    (= (requires arKolling egg) 0)
+    (= (requires arKolling painkillers) 0)
+    (= (requires arColes egg) 0)
+    (= (requires arColes painkillers) 0)
+    (= (requires arKeppens egg) 0)
+    (= (requires arKeppens painkillers) 0)
+    (= (requires arAgi egg) 0)
+    (= (requires arAgi painkillers) 0)
 ))
 
-;un-comment the following line if metric is needed
-;(:metric minimize (???))
 )
