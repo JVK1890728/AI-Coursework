@@ -6,7 +6,6 @@
     arPerson1 arPerson2 arPerson3 arPerson4 arPerson5 - atRiskPerson
     walking - modeOfTravel
     resource1 resource2 resource3 - resource
-    location1 location2 location3 location4 - locatable
 )
 
 (:init
@@ -31,66 +30,30 @@
     (= (time-to-arrive depot2 arPerson2 walking) 5)
     (= (time-to-arrive arPerson2 depot2 walking) 5)
     
-    (linked depot2 location2)
-    (linked location2 depot2)
-    (= (time-to-arrive depot2 location2 walking) 4)
-    (= (time-to-arrive location2 depot2 walking) 4)
-    
-    (linked depot2 location3)
-    (linked location3 depot2)
-    (= (time-to-arrive depot2 location3 walking) 6)
-    (= (time-to-arrive location3 depot2 walking) 6)
-    
-    (linked location2 arPerson5)
-    (linked arPerson5 location2)
-    (= (time-to-arrive location2 arPerson5 walking) 3)
-    (= (time-to-arrive arPerson5 location2 walking) 3)
-    
-    (linked arPerson5 location1)
-    (linked location1 arPerson5)
-    (= (time-to-arrive arPerson5 location1 walking) 2)
-    (= (time-to-arrive location1 arPerson5 walking) 2)
-    
-    (linked location1 depot3)
-    (linked depot3 location1)
-    (= (time-to-arrive location1 depot3 walking) 2)
-    (= (time-to-arrive depot3 location1 walking) 2)
-    
-    (linked depot3 location2)
-    (linked location2 depot3)
-    (= (time-to-arrive depot3 location2 walking) 4)
-    (= (time-to-arrive location2 depot3 walking) 4)
-    
-    (linked depot3 location4)
-    (linked location4 depot3)
-    (= (time-to-arrive depot3 location4 walking) 7)
-    (= (time-to-arrive location4 depot3 walking) 7)
-    
-    (linked depot3 location3)
-    (linked location3 depot3)
-    (= (time-to-arrive depot3 location3 walking) 5)
-    (= (time-to-arrive location3 depot3 walking) 5)
-    
     (linked depot1 arPerson3)
     (linked arPerson3 depot1)
     (= (time-to-arrive depot1 arPerson3 walking) 4)
     (= (time-to-arrive arPerson3 depot1 walking) 4)
     
-    (linked arPerson3 location3)
-    (linked location3 arPerson3)
-    (= (time-to-arrive arPerson3 location3 walking) 6)
-    (= (time-to-arrive location3 arPerson3 walking) 6)
+    (linked depot1 arPerson4)
+    (linked arPerson4 depot1)
+    (= (time-to-arrive depot1 arPerson4 walking) 4)
+    (= (time-to-arrive arPerson4 depot1 walking) 4)
     
-    (linked depot1 location3)
-    (linked location3 depot1)
-    (= (time-to-arrive depot1 location3 walking) 5)
-    (= (time-to-arrive location3 depot1 walking) 5)
+    (linked depot2 arPerson5)
+    (linked arPerson5 depot2)
+    (= (time-to-arrive depot2 arPerson5 walking) 4)
+    (= (time-to-arrive arPerson5 depot2 walking) 4)
     
-    (linked location3 arPerson4)
-    (linked arPerson4 location3)
-    (= (time-to-arrive location3 arPerson3 walking) 13)
-    (= (time-to-arrive arPerson3 location3 walking) 13)
-    
+    (linked depot1 depot2)
+    (linked depot2 depot1)
+    (= (time-to-arrive depot1 depot2 walking) 4)
+    (= (time-to-arrive depot2 depot1 walking) 4)
+
+    (linked depot3 depot2)
+    (linked depot2 depot3)
+    (= (time-to-arrive depot3 depot2 walking) 4)
+    (= (time-to-arrive depot2 depot3 walking) 4)
     
     ; define depots
     (= (resources-stored resource1 depot1) 15)
@@ -142,7 +105,7 @@
     
     ; define volunteers
     (available volunteer1)
-    (at volunteer1 location4)
+    (at volunteer3 depot1)
     (usingTransport volunteer1 walking)
     (= (capacity volunteer1 walking) 7)
     (= (activePeriod volunteer1) 40)
@@ -151,7 +114,7 @@
     (= (resources-stored resource3 volunteer1) 0)
     
     (available volunteer2)
-    (at volunteer2 location3)
+    (at volunteer2 arPerson3)
     (usingTransport volunteer2 walking)
     (= (capacity volunteer2 walking) 11)
     (= (activePeriod volunteer2) 70)
