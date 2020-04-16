@@ -130,7 +130,6 @@
 
     ; cluster 3
     ; cluster 3 requirements
-    arKolling arColes arKeppens arAgi - atRiskPerson
     (= (requires arKolling egg) 2)
     (= (requires arKolling painkillers) 1)
     (= (requires arColes egg) 1)
