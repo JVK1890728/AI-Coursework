@@ -88,8 +88,8 @@
     
     (linked l3 ar4)
     (linked ar4 l3)
-    (= (time-to-arrive l3 ar3 walking) 12)
-    (= (time-to-arrive ar3 l3 walking) 12)
+    (= (time-to-arrive l3 ar3 walking) 13)
+    (= (time-to-arrive ar3 l3 walking) 13)
     
     
     ; define depots
@@ -146,27 +146,27 @@
     (usingTransport v1 walking)
     (= (capacity v1 walking) 7)
     (= (activePeriod v1) 40)
-    (= (resources-stored v1 r1) 0)
-    (= (resources-stored v1 r2) 0)
-    (= (resources-stored v1 r3) 0)
+    (= (resources-stored r1 v1) 0)
+    (= (resources-stored r2 v1) 0)
+    (= (resources-stored r3 v1) 0)
     
     (available v2)
     (at v2 l3)
     (usingTransport v2 walking)
     (= (capacity v2 walking) 11)
     (= (activePeriod v2) 70)
-    (= (resources-stored v2 r1) 0)
-    (= (resources-stored v2 r2) 0)
-    (= (resources-stored v2 r3) 0)
+    (= (resources-stored r1 v2) 0)
+    (= (resources-stored r2 v2) 0)
+    (= (resources-stored r3 v2) 0)
     
     (available v3)
     (at v3 ar3)
     (usingTransport v3 walking)
     (= (capacity v3 walking) 5.5)
     (= (activePeriod v3) 50)
-    (= (resources-stored v3 r1) 0)
-    (= (resources-stored v3 r2) 0)
-    (= (resources-stored v3 r3) 0)
+    (= (resources-stored r1 v3) 0)
+    (= (resources-stored r2 v3) 0)
+    (= (resources-stored r3 v3) 0)
 )
 
 (:goal (and
@@ -189,7 +189,6 @@
     (= (requires ar5 r1) 0)
     (= (requires ar5 r2) 0)
     (= (requires ar5 r3) 0)
-))
 ))
 
 )
