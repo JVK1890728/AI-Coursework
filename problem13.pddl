@@ -64,8 +64,8 @@
 
     (linked dStrand ar8)
     (linked ar8 dStrand)
-    (= (time-to-arrive dStrand ar7 walking) 7)
-    (= (time-to-arrive ar7 dStrand walking) 7)
+    (= (time-to-arrive dStrand ar8 walking) 7)
+    (= (time-to-arrive ar8 dStrand walking) 7)
 
     ; requirements
     (= (requires ar8 egg) 2)
