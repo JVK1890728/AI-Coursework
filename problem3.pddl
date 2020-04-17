@@ -32,6 +32,9 @@
     (usingTransport vWilliam walking)
     (usingTransport vDan cycling)
     (usingTransport vJeff driving)
+    (= (activePeriod vWilliam) 60)
+    (= (activePeriod vDan) 60)
+    (= (activePeriod vJeff) 60)
 
     (= (capacity vJeff driving) 30)
     (= (capacity vWilliam walking) 10)
@@ -43,6 +46,10 @@
     (linked arRaff dStrand)
     (linked dStrand arBen)
     (linked arBen dStrand)
+    (linked dWaterloo arJay)
+    (linked arJay dWaterloo)
+    (linked dStrand arJay)
+    (linked arJay dStrand)
     (linked dWaterloo arGiulio)
     (linked arGiulio dWaterloo)
     (linked dWaterloo dStrand)
@@ -83,8 +90,8 @@
     (= (time-to-arrive dStrand dWaterloo walking) 20)
     (= (time-to-arrive dWaterloo dStrand cycling) 7)
     (= (time-to-arrive dStrand dWaterloo cycling) 7)
-    (= (time-to-arrive dStrand dWaterloo driving) 5)
     (= (time-to-arrive dWaterloo dStrand driving) 5)
+    (= (time-to-arrive dStrand dWaterloo driving) 5)
     
 
     
