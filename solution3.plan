@@ -1,0 +1,200 @@
+,,,Number of literals: 21
+Constructing lookup tables: [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%]
+Post filtering unreachable actions:  [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%]
+(resources-stored egg dstrand) has a finite upper bound: [-inf,100.000]
+(resources-stored painkillers dstrand) has a finite upper bound: [-inf,50.000]
+(resources-stored egg dwaterloo) has a finite upper bound: [-inf,10.000]
+(resources-stored painkillers dwaterloo) has a finite upper bound: [-inf,5.000]
+(capacity vwilliam cycling) has finite bounds: [6.000,6.000]
+(capacity vdan walking) has finite bounds: [10.000,10.000]
+(requires arraff egg) has a finite upper bound: [-inf,2.000]
+(requires arraff painkillers) has a finite upper bound: [-inf,1.000]
+(requires arben egg) has a finite upper bound: [-inf,1.000]
+(requires arben painkillers) has a finite upper bound: [-inf,6.000]
+(requires argiulio egg) has a finite upper bound: [-inf,4.000]
+(requires argiulio painkillers) has a finite upper bound: [-inf,8.000]
+(requires arjay egg) has a finite upper bound: [-inf,5.000]
+(requires arjay painkillers) has a finite upper bound: [-inf,5.000]
+Have identified that bigger values of (resources-stored egg dstrand) are preferable
+Have identified that bigger values of (resources-stored painkillers dstrand) are preferable
+Have identified that bigger values of (resources-stored egg dwaterloo) are preferable
+Have identified that bigger values of (resources-stored painkillers dwaterloo) are preferable
+Have identified that bigger values of (resources-stored egg vdan) are preferable
+Have identified that bigger values of (resources-stored painkillers vdan) are preferable
+Have identified that bigger values of (resources-stored egg vwilliam) are preferable
+Have identified that bigger values of (resources-stored painkillers vwilliam) are preferable
+Have identified that bigger values of (resources-stored egg vjeff) are preferable
+Have identified that bigger values of (resources-stored painkillers vjeff) are preferable
+Have identified that bigger values of (capacity vjeff driving) are preferable
+Have identified that bigger values of (capacity vwilliam walking) are preferable
+Have identified that bigger values of (capacity vdan cycling) are preferable
+Recognised a monotonic-change-induced limit on var18(requires arraff egg)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var19(requires arraff painkillers)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var20(requires arben egg)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var21(requires arben painkillers)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var22(requires argiulio egg)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var23(requires argiulio painkillers)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var24(requires arjay egg)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var25(requires arjay painkillers)
+- Must be >= 0.000
+None of the ground temporal actions in this problem have been recognised as compression-safe
+Initial heuristic = 78.000, admissible cost estimate 0.000
+b (76.000 | 0.200)b (74.000 | 0.401)b (73.000 | 1.402)b (72.000 | 1.603)b (71.000 | 3.804)b (70.000 | 3.804)b (68.000 | 4.005)b (67.000 | 4.005)b (66.000 | 4.006)b (65.000 | 6.210)b (64.000 | 6.411)b (63.000 | 7.412)b (62.000 | 7.613)b (61.000 | 8.614)b (60.000 | 8.815)b (59.000 | 10.409)b (58.000 | 10.409)b (56.000 | 10.610)b (55.000 | 11.018)b (54.000 | 11.219)b (53.000 | 13.422)b (52.000 | 14.624)b (51.000 | 19.625)b (50.000 | 19.625)b (49.000 | 21.626)b (48.000 | 21.827)b (47.000 | 24.231)b (46.000 | 26.231)b (45.000 | 26.231)b (44.000 | 26.432)b (42.000 | 28.433)b (41.000 | 30.836)b (40.000 | 32.434)b (39.000 | 35.239)b (38.000 | 36.636)b (36.000 | 36.837)b (35.000 | 39.644)b (34.000 | 39.845)b (33.000 | 53.007)b (32.000 | 61.241)b (31.000 | 61.241)b (29.000 | 61.241)b (28.000 | 61.241)b (27.000 | 91.462)b (26.000 | 91.663)b (24.000 | 91.663)b (23.000 | 121.665)b (22.000 | 140.470)b (21.000 | 140.470)b (20.000 | 140.470)b (19.000 | 140.470)b (18.000 | 140.470)b (17.000 | 155.869)b (16.000 | 198.475)b (15.000 | 218.476)b (14.000 | 218.677)b (13.000 | 251.081)b (12.000 | 251.081)b (11.000 | 313.486)b (10.000 | 313.487)b (9.000 | 333.488)b (8.000 | 370.893)b (7.000 | 377.893)b (6.000 | 377.894)b (5.000 | 381.895)b (4.000 | 381.895)b (2.000 | 382.096)(G)
+; No metric specified - using makespan
+
+; Plan found with metric 404.502
+; States evaluated so far: 9131
+; States pruned based on pre-heuristic cost lower bound: 0
+; Time 32.85
+0.000: (pick-up-resource vjeff driving painkillers dstrand)  [0.200]
+0.201: (pick-up-resource vjeff driving egg dstrand)  [0.200]
+0.402: (travel vjeff dstrand arben driving)  [1.000]
+0.402: (pick-up-resource vdan cycling egg dstrand)  [0.200]
+0.603: (pick-up-resource vdan cycling painkillers dstrand)  [0.200]
+0.603: (pick-up-resource vwilliam walking egg dstrand)  [0.200]
+0.804: (travel vdan dstrand arraff cycling)  [3.000]
+0.804: (travel vwilliam dstrand arben walking)  [6.000]
+1.403: (deliver-resource vjeff driving painkillers arben)  [0.200]
+1.604: (travel vjeff arben dstrand driving)  [1.000]
+2.605: (pick-up-resource vjeff driving painkillers dstrand)  [0.200]
+2.806: (travel vjeff dstrand arben driving)  [1.000]
+3.805: (deliver-resource vdan cycling egg arraff)  [0.200]
+3.807: (deliver-resource vjeff driving painkillers arben)  [0.200]
+4.006: (deliver-resource vdan cycling painkillers arraff)  [0.200]
+4.008: (travel vjeff arben dstrand driving)  [1.000]
+4.207: (travel vdan arraff dstrand cycling)  [3.000]
+5.009: (pick-up-resource vjeff driving painkillers dstrand)  [0.200]
+5.210: (travel vjeff dstrand arben driving)  [1.000]
+6.211: (deliver-resource vjeff driving painkillers arben)  [0.200]
+6.412: (travel vjeff arben dstrand driving)  [1.000]
+6.805: (deliver-resource vwilliam walking egg arben)  [0.200]
+7.006: (travel vwilliam arben dstrand walking)  [6.000]
+7.208: (pick-up-resource vdan cycling egg dstrand)  [0.200]
+7.409: (travel vdan dstrand arraff cycling)  [3.000]
+7.413: (pick-up-resource vjeff driving painkillers dstrand)  [0.200]
+7.614: (travel vjeff dstrand arben driving)  [1.000]
+8.615: (deliver-resource vjeff driving painkillers arben)  [0.200]
+8.816: (travel vjeff arben dstrand driving)  [1.000]
+9.817: (pick-up-resource vjeff driving painkillers dstrand)  [0.200]
+10.018: (travel vjeff dstrand arben driving)  [1.000]
+10.410: (deliver-resource vdan cycling egg arraff)  [0.200]
+10.611: (travel vdan arraff dstrand cycling)  [3.000]
+11.019: (deliver-resource vjeff driving painkillers arben)  [0.200]
+11.220: (travel vjeff arben dstrand driving)  [1.000]
+12.221: (pick-up-resource vjeff driving painkillers dstrand)  [0.200]
+12.422: (travel vjeff dstrand arben driving)  [1.000]
+13.007: (travel vwilliam dstrand arjay walking)  [40.000]
+13.423: (deliver-resource vjeff driving painkillers arben)  [0.200]
+13.612: (travel vdan dstrand dwaterloo cycling)  [7.000]
+13.624: (travel vjeff arben dstrand driving)  [1.000]
+14.625: (travel vjeff dstrand dwaterloo driving)  [5.000]
+19.626: (travel vjeff dwaterloo argiulio driving)  [2.000]
+21.627: (deliver-resource vjeff driving egg argiulio)  [0.200]
+21.828: (travel vjeff argiulio dwaterloo driving)  [2.000]
+23.829: (pick-up-resource vjeff driving egg dwaterloo)  [0.200]
+24.030: (pick-up-resource vjeff driving painkillers dwaterloo)  [0.200]
+24.031: (pick-up-resource vdan cycling painkillers dwaterloo)  [0.200]
+24.231: (travel vjeff dwaterloo argiulio driving)  [2.000]
+24.232: (travel vdan dwaterloo argiulio cycling)  [4.000]
+26.232: (deliver-resource vjeff driving painkillers argiulio)  [0.200]
+26.433: (deliver-resource vjeff driving egg argiulio)  [0.200]
+26.634: (travel vjeff argiulio dwaterloo driving)  [2.000]
+28.233: (deliver-resource vdan cycling painkillers argiulio)  [0.200]
+28.434: (travel vdan argiulio dwaterloo cycling)  [4.000]
+28.635: (pick-up-resource vjeff driving painkillers dwaterloo)  [0.200]
+28.836: (travel vjeff dwaterloo argiulio driving)  [2.000]
+30.837: (deliver-resource vjeff driving painkillers argiulio)  [0.200]
+31.038: (travel vjeff argiulio dwaterloo driving)  [2.000]
+32.435: (pick-up-resource vdan cycling egg dwaterloo)  [0.200]
+32.636: (travel vdan dwaterloo argiulio cycling)  [4.000]
+33.039: (pick-up-resource vjeff driving painkillers dwaterloo)  [0.200]
+33.240: (travel vjeff dwaterloo argiulio driving)  [2.000]
+35.241: (deliver-resource vjeff driving painkillers argiulio)  [0.200]
+35.442: (travel vjeff argiulio dwaterloo driving)  [2.000]
+36.637: (deliver-resource vdan cycling egg argiulio)  [0.200]
+36.838: (travel vdan argiulio dwaterloo cycling)  [4.000]
+37.443: (pick-up-resource vjeff driving painkillers dwaterloo)  [0.200]
+37.644: (travel vjeff dwaterloo argiulio driving)  [2.000]
+39.645: (deliver-resource vjeff driving painkillers argiulio)  [0.200]
+39.846: (travel vjeff argiulio dwaterloo driving)  [2.000]
+40.839: (pick-up-resource vdan cycling egg dwaterloo)  [0.200]
+41.040: (travel vdan dwaterloo arjay cycling)  [20.000]
+41.847: (travel vjeff dwaterloo dstrand driving)  [5.000]
+46.848: (pick-up-resource vjeff driving painkillers dstrand)  [0.200]
+47.049: (pick-up-resource vjeff driving egg dstrand)  [0.200]
+47.250: (travel vjeff dstrand dwaterloo driving)  [5.000]
+52.251: (travel vjeff dwaterloo argiulio driving)  [2.000]
+54.252: (deliver-resource vjeff driving egg argiulio)  [0.200]
+54.453: (travel vjeff argiulio dwaterloo driving)  [2.000]
+56.454: (travel vjeff dwaterloo argiulio driving)  [2.000]
+58.455: (deliver-resource vjeff driving painkillers argiulio)  [0.200]
+58.656: (rest vjeff)  [10.000]
+61.041: (deliver-resource vdan cycling egg arjay)  [0.200]
+68.657: (travel vjeff argiulio dwaterloo driving)  [2.000]
+70.658: (pick-up-resource vjeff driving egg dwaterloo)  [0.200]
+70.859: (travel vjeff dwaterloo dstrand driving)  [5.000]
+75.860: (pick-up-resource vjeff driving painkillers dstrand)  [0.200]
+76.061: (travel vjeff dstrand arjay driving)  [15.000]
+91.062: (transfer-resource vjeff vdan driving cycling painkillers arjay)  [0.400]
+91.463: (deliver-resource vdan cycling painkillers arjay)  [0.200]
+91.463: (deliver-resource vjeff driving egg arjay)  [0.200]
+91.664: (travel vjeff arjay dwaterloo driving)  [12.000]
+91.664: (rest vdan)  [10.000]
+101.665: (travel vdan arjay dwaterloo cycling)  [20.000]
+103.665: (pick-up-resource vjeff driving egg dwaterloo)  [0.200]
+103.866: (travel vjeff dwaterloo arjay driving)  [12.000]
+115.867: (deliver-resource vjeff driving egg arjay)  [0.200]
+116.068: (travel vjeff arjay dwaterloo driving)  [12.000]
+121.666: (travel vdan dwaterloo dstrand cycling)  [7.000]
+128.069: (pick-up-resource vjeff driving egg dwaterloo)  [0.200]
+128.667: (pick-up-resource vdan cycling painkillers dstrand)  [0.200]
+128.868: (travel vdan dstrand dwaterloo cycling)  [7.000]
+135.869: (travel vdan dwaterloo arjay cycling)  [20.000]
+155.870: (deliver-resource vdan cycling painkillers arjay)  [0.200]
+156.071: (travel vdan arjay dstrand cycling)  [25.000]
+181.072: (pick-up-resource vdan cycling painkillers dstrand)  [0.200]
+181.273: (pick-up-resource vdan cycling egg dstrand)  [0.200]
+181.474: (rest vdan)  [10.000]
+191.475: (travel vdan dstrand dwaterloo cycling)  [7.000]
+198.476: (travel vdan dwaterloo arjay cycling)  [20.000]
+206.676: (travel vjeff dwaterloo arjay driving)  [12.000]
+218.477: (deliver-resource vdan cycling painkillers arjay)  [0.200]
+218.677: (deliver-resource vjeff driving egg arjay)  [0.200]
+218.678: (deliver-resource vdan cycling egg arjay)  [0.200]
+218.879: (travel vdan arjay dstrand cycling)  [25.000]
+243.880: (pick-up-resource vdan cycling painkillers dstrand)  [0.200]
+244.081: (travel vdan dstrand dwaterloo cycling)  [7.000]
+251.082: (travel vdan dwaterloo arjay cycling)  [20.000]
+271.083: (deliver-resource vdan cycling painkillers arjay)  [0.200]
+271.284: (rest vdan)  [10.000]
+281.285: (travel vdan arjay dstrand cycling)  [25.000]
+306.286: (pick-up-resource vdan cycling painkillers dstrand)  [0.200]
+306.487: (travel vdan dstrand dwaterloo cycling)  [7.000]
+313.488: (travel vdan dwaterloo arjay cycling)  [20.000]
+333.489: (deliver-resource vdan cycling painkillers arjay)  [0.200]
+333.690: (travel vdan arjay dwaterloo cycling)  [20.000]
+353.691: (travel vdan dwaterloo dstrand cycling)  [7.000]
+360.692: (pick-up-resource vdan cycling painkillers dstrand)  [0.200]
+360.893: (rest vdan)  [10.000]
+370.894: (travel vdan dstrand dwaterloo cycling)  [7.000]
+377.895: (travel vdan dwaterloo argiulio cycling)  [4.000]
+381.896: (deliver-resource vdan cycling painkillers argiulio)  [0.200]
+382.097: (travel vdan argiulio dwaterloo cycling)  [4.000]
+386.098: (travel vdan dwaterloo dstrand cycling)  [7.000]
+393.099: (pick-up-resource vdan cycling painkillers dstrand)  [0.200]
+393.300: (travel vdan dstrand dwaterloo cycling)  [7.000]
+400.301: (travel vdan dwaterloo argiulio cycling)  [4.000]
+404.302: (deliver-resource vdan cycling painkillers argiulio)  [0.200]
+
+ * All goal deadlines now no later than 404.502
+
+Resorting to best-first search
+Running WA* with W = 5.000, not restarting with goal states
+b (76.000 | 0.200)b (74.000 | 0.401)b (73.000 | 1.402)b (72.000 | 2.000)b (70.000 | 6.603)b (68.000 | 29.404)b (66.000 | 57.808)b (64.000 | 95.009)b (64.000 | 65.009)b (60.000 | 85.413)b (58.000 | 96.213)b (56.000 | 146.617)b (54.000 | 146.617)b (52.000 | 161.818)b (52.000 | 146.617)b (50.000 | 170.626)b (50.000 | 146.617)b (48.000 | 183.030)b (48.000 | 149.031)b (47.000 | 162.436)b (46.000 | 162.436)b (45.000 | 167.437)b (44.000 | 167.437)b (43.000 | 179.438)b (43.000 | 169.438)b (42.000 | 167.638)b (41.000 | 179.638)b (41.000 | 169.638)b (40.000 | 179.839)b (40.000 | 169.839)b (39.000 | 192.042)b (38.000 | 180.242)b (37.000 | 194.445)b (36.000 | 194.646)b (35.000 | 196.847)b (34.000 | 195.048)b (33.000 | 199.251)b (32.000 | 199.452)b (31.000 | 201.654)b (30.000 | 199.853)b (29.000 | 204.057)b (28.000 | 204.257)b (27.000 | 206.459)b (26.000 | 204.660)b (24.000 | 207.264)b (23.000 | 221.642)b (22.000 | 219.465)b (21.000 | 221.642)b (20.000 | 221.642)b (19.000 | 233.643)b (18.000 | 233.643)b (16.000 | 233.844)b (14.000 | 233.844)b (12.000 | 260.272)b (12.000 | 252.273)b (10.000 | 282.678)b (8.000 | 305.082)b (8.000 | 283.080)b (6.000 | 305.485)b (6.000 | 283.481)b (4.000 | 305.887)
