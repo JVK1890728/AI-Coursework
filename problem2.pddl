@@ -38,21 +38,29 @@
     (linked arRaff dStrand)
     (= (time-to-arrive dStrand arRaff walking) 10)
     (= (time-to-arrive arRaff dStrand walking) 10)
+    (= (time-to-arrive dStrand arRaff cycling) 3)
+    (= (time-to-arrive arRaff dStrand cycling) 3)
 
     (linked dStrand arBen)
     (linked arBen dStrand)
     (= (time-to-arrive dStrand arBen walking) 6)
     (= (time-to-arrive arBen dStrand walking) 6)
+    (= (time-to-arrive dStrand arBen cycling) 2)
+    (= (time-to-arrive arBen dStrand cycling) 2)
     
     (linked dWaterloo arGiulio)
     (linked arGiulio dWaterloo)
     (= (time-to-arrive dWaterloo arGiulio walking) 12)
     (= (time-to-arrive arGiulio dWaterloo walking) 12)
-
+    (= (time-to-arrive dWaterloo arGiulio cycling) 4)
+    (= (time-to-arrive arGiulio dWaterloo cycling) 4)
+    
     (linked dWaterloo dStrand)
     (linked dStrand dWaterloo)
     (= (time-to-arrive dWaterloo dStrand walking) 20)
     (= (time-to-arrive dStrand dWaterloo walking) 20)
+    (= (time-to-arrive dWaterloo dStrand cycling) 7)
+    (= (time-to-arrive dStrand dWaterloo cycling) 7)
 
     ; requirements 
     (= (requires arRaff egg) 2)
