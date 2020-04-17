@@ -8,29 +8,31 @@
 )
 
 (:init
-    ;todo: put the initial state's facts and numeric values here
+    ; resources
     (= (resource-size egg) 0.2)
     (= (resource-size painkillers) 0.4)
 
+    ; depots
     (= (resources-stored egg dStrand) 100)
     (= (resources-stored painkillers dStrand) 50)
-    (= (resources-stored egg vDan) 0)
-    (= (resources-stored painkillers vDan) 0)
+    
+    (at vWilliam dStrand)
+    (available vWilliam)
+    (usingTransport vWilliam walking)
+    (= (activePeriod vWilliam) 60)
+    (= (capacity vWilliam walking) 10)
     (= (resources-stored egg vWilliam) 0)
     (= (resources-stored painkillers vWilliam) 0)
     
-    (at vWilliam dStrand)
     (at vDan dStrand)
-    (available vWilliam)
     (available vDan)
-    (usingTransport vWilliam walking)
     (usingTransport vDan cycling)
-    (= (activePeriod vWilliam) 60)
     (= (activePeriod vDan) 60)
-    
-    (= (capacity vWilliam walking) 10)
     (= (capacity vDan cycling) 6)
+    (= (resources-stored egg vDan) 0)
+    (= (resources-stored painkillers vDan) 0)
 
+    ; links
     ; cluster 1
     ; cluster 1 requirements
     (= (requires arRaff egg) 2)
@@ -40,6 +42,8 @@
     (linked dStrand arRaff)
     (= (time-to-arrive dStrand arRaff walking) 10)
     (= (time-to-arrive arRaff dStrand walking) 10)
+    (= (time-to-arrive dStrand arRaff cycling) 3)
+    (= (time-to-arrive arRaff dStrand cycling) 3)
 
     ; cluster 2
     ; cluster 2 requirements
@@ -55,30 +59,41 @@
     (linked arBen dStrand)
     (= (time-to-arrive dStrand arBen walking) 10)
     (= (time-to-arrive arBen dStrand walking) 10)
+    (= (time-to-arrive dStrand arBen cycling) 3)
+    (= (time-to-arrive arBen dStrand cycling) 3)
     (linked dStrand arJay)
     (linked arJay dStrand)
     (= (time-to-arrive dStrand arJay walking) 10)
     (= (time-to-arrive arJay dStrand walking) 10)
+    (= (time-to-arrive dStrand arJay cycling) 3)
+    (= (time-to-arrive arJay dStrand cycling) 3)
     (linked dStrand arGiulio)
     (linked arGiulio dStrand)
     (= (time-to-arrive dStrand arGiulio walking) 10)
     (= (time-to-arrive arGiulio dStrand walking) 10)
+    (= (time-to-arrive dStrand arGiulio cycling) 3)
+    (= (time-to-arrive arGiulio dStrand cycling) 3)
     (linked arBen arJay)
     (linked arJay arBen)
     (= (time-to-arrive arBen arJay walking) 1)
     (= (time-to-arrive arJay arBen walking) 1)
+    (= (time-to-arrive arBen arJay cycling) 0.5)
+    (= (time-to-arrive arJay arBen cycling) 0.5)
     (linked arBen arGiulio)
     (linked arGiulio arBen)
     (= (time-to-arrive arBen arGiulio walking) 1)
     (= (time-to-arrive arGiulio arBen walking) 1)
+    (= (time-to-arrive arBen arGiulio cycling) 0.5)
+    (= (time-to-arrive arGiulio arBen cycling) 0.5)
     (linked arJay arGiulio)
     (linked arGiulio arJay)
     (= (time-to-arrive arJay arGiulio walking) 1)
     (= (time-to-arrive arGiulio arJay walking) 1)
+    (= (time-to-arrive arJay arGiulio cycling) 0.5)
+    (= (time-to-arrive arGiulio arJay cycling) 0.5)
 )
 
 (:goal (and
-    ;todo: put the goal condition here
     (= (requires arBen egg) 0)
     (= (requires arBen painkillers) 0)
     (= (requires arRaff egg) 0)
@@ -88,7 +103,4 @@
     (= (requires arJay egg) 0)
     (= (requires arJay painkillers) 0)
 ))
-
-;un-comment the following line if metric is needed
-;(:metric minimize (???))
 )
