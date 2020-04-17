@@ -4,44 +4,46 @@
     arRaff arBen arGiulio arJay - atRiskPerson
     dStrand - depot
     egg painkillers bread apple chocolate - resource
-    walking cycling - modeOfTravel
+    walking - modeOfTravel
 )
 
 (:init
-    ;todo: put the initial state's facts and numeric values here
+    ; resources
     (= (resource-size egg) 0.2)
     (= (resource-size painkillers) 0.4)
     (= (resource-size bread) 0.8)
     (= (resource-size apple) 0.1)
     (= (resource-size chocolate) 0.3)
 
+    ; depots
     (= (resources-stored egg dStrand) 100)
     (= (resources-stored painkillers dStrand) 50)
     (= (resources-stored bread dStrand) 50)
     (= (resources-stored apple dStrand) 50)
     (= (resources-stored chocolate dStrand) 50)
-    (= (resources-stored egg vDan) 0)
-    (= (resources-stored painkillers vDan) 0)
-    (= (resources-stored bread vDan) 0)
-    (= (resources-stored apple vDan) 0)
-    (= (resources-stored chocolate vDan) 0)
+
+    ; volunteers 
+    (at vWilliam dStrand)
+    (available vWilliam)
+    (usingTransport vWilliam walking)
+    (= (activePeriod vWilliam) 60)
+    (= (capacity vWilliam walking) 10)
     (= (resources-stored egg vWilliam) 0)
     (= (resources-stored painkillers vWilliam) 0)
     (= (resources-stored bread vWilliam) 0)
     (= (resources-stored apple vWilliam) 0)
     (= (resources-stored chocolate vWilliam) 0)
     
-    (at vWilliam dStrand)
     (at vDan dStrand)
-    (available vWilliam)
     (available vDan)
-    (usingTransport vWilliam walking)
-    (usingTransport vDan cycling)
-    (= (activePeriod vWilliam) 60)
+    (usingTransport vDan walking)
     (= (activePeriod vDan) 60)
-    
-    (= (capacity vWilliam walking) 10)
-    (= (capacity vDan cycling) 6)
+    (= (capacity vDan walking) 6)
+    (= (resources-stored egg vDan) 0)
+    (= (resources-stored painkillers vDan) 0)
+    (= (resources-stored bread vDan) 0)
+    (= (resources-stored apple vDan) 0)
+    (= (resources-stored chocolate vDan) 0)
 
     ; cluster 1
     ; cluster 1 requirements
@@ -102,7 +104,6 @@
 )
 
 (:goal (and
-    ;todo: put the goal condition here
     (= (requires arRaff egg) 0)
     (= (requires arRaff painkillers) 0)
     (= (requires arRaff bread) 0)
@@ -125,7 +126,4 @@
     (= (requires arJay chocolate) 0)
 
 ))
-
-;un-comment the following line if metric is needed
-;(:metric minimize (???))
 )
