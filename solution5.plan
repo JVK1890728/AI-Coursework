@@ -1,0 +1,84 @@
+,Number of literals: 27
+Constructing lookup tables: [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%]
+Post filtering unreachable actions:  [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%]
+(resources-stored resource1 depot1) has a finite upper bound: [-inf,15.000]
+(resources-stored resource2 depot1) has a finite upper bound: [-inf,9.000]
+(resources-stored resource3 depot1) has a finite upper bound: [-inf,0.000]
+(resources-stored resource1 depot2) has a finite upper bound: [-inf,2.000]
+(resources-stored resource2 depot2) has a finite upper bound: [-inf,17.000]
+(resources-stored resource3 depot2) has a finite upper bound: [-inf,11.000]
+(resources-stored resource1 depot3) has a finite upper bound: [-inf,6.000]
+(resources-stored resource2 depot3) has a finite upper bound: [-inf,5.000]
+(resources-stored resource3 depot3) has a finite upper bound: [-inf,16.000]
+(requires arperson1 resource1) has a finite upper bound: [-inf,6.000]
+(requires arperson1 resource2) has a finite upper bound: [-inf,0.000]
+(requires arperson1 resource3) has a finite upper bound: [-inf,7.000]
+(requires arperson2 resource1) has a finite upper bound: [-inf,3.000]
+(requires arperson2 resource2) has a finite upper bound: [-inf,9.000]
+(requires arperson2 resource3) has a finite upper bound: [-inf,0.000]
+(requires arperson3 resource1) has a finite upper bound: [-inf,12.000]
+(requires arperson3 resource2) has a finite upper bound: [-inf,5.000]
+(requires arperson3 resource3) has a finite upper bound: [-inf,8.000]
+(requires arperson4 resource1) has a finite upper bound: [-inf,0.000]
+(requires arperson4 resource2) has a finite upper bound: [-inf,11.000]
+(requires arperson4 resource3) has a finite upper bound: [-inf,4.000]
+(requires arperson5 resource1) has a finite upper bound: [-inf,3.000]
+(requires arperson5 resource2) has a finite upper bound: [-inf,6.000]
+(requires arperson5 resource3) has a finite upper bound: [-inf,8.000]
+Have identified that bigger values of (resources-stored resource1 depot1) are preferable
+Have identified that bigger values of (resources-stored resource2 depot1) are preferable
+Have identified that bigger values of (resources-stored resource3 depot1) are preferable
+Have identified that bigger values of (resources-stored resource1 depot2) are preferable
+Have identified that bigger values of (resources-stored resource2 depot2) are preferable
+Have identified that bigger values of (resources-stored resource3 depot2) are preferable
+Have identified that bigger values of (resources-stored resource1 depot3) are preferable
+Have identified that bigger values of (resources-stored resource2 depot3) are preferable
+Have identified that bigger values of (resources-stored resource3 depot3) are preferable
+Have identified that bigger values of (capacity volunteer1 walking) are preferable
+Have identified that bigger values of (resources-stored resource1 volunteer1) are preferable
+Have identified that bigger values of (resources-stored resource2 volunteer1) are preferable
+Have identified that bigger values of (resources-stored resource3 volunteer1) are preferable
+Have identified that bigger values of (capacity volunteer2 walking) are preferable
+Have identified that bigger values of (resources-stored resource1 volunteer2) are preferable
+Have identified that bigger values of (resources-stored resource2 volunteer2) are preferable
+Have identified that bigger values of (resources-stored resource3 volunteer2) are preferable
+Have identified that bigger values of (capacity volunteer3 walking) are preferable
+Have identified that bigger values of (resources-stored resource1 volunteer3) are preferable
+Have identified that bigger values of (resources-stored resource2 volunteer3) are preferable
+Have identified that bigger values of (resources-stored resource3 volunteer3) are preferable
+Recognised a monotonic-change-induced limit on var9(requires arperson1 resource1)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var10(requires arperson1 resource2)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var11(requires arperson1 resource3)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var12(requires arperson2 resource1)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var13(requires arperson2 resource2)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var14(requires arperson2 resource3)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var15(requires arperson3 resource1)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var16(requires arperson3 resource2)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var17(requires arperson3 resource3)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var18(requires arperson4 resource1)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var19(requires arperson4 resource2)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var20(requires arperson4 resource3)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var21(requires arperson5 resource1)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var22(requires arperson5 resource2)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var23(requires arperson5 resource3)
+- Must be >= 0.000
+None of the ground temporal actions in this problem have been recognised as compression-safe
+Initial heuristic = 184.000, admissible cost estimate 0.000
+b (181.000 | 8.000)b (180.000 | 8.000)b (179.000 | 8.000)b (178.000 | 8.000)b (177.000 | 9.202)b (176.000 | 18.001)b (175.000 | 20.605)b (174.000 | 28.002)b (172.000 | 28.002)b (170.000 | 28.002)b (168.000 | 28.014)b (166.000 | 33.003)b (165.000 | 33.003)b (164.000 | 33.003)b (163.000 | 37.004)b (162.000 | 37.004)b (161.000 | 37.021)b (160.000 | 37.623)b (159.000 | 42.225)b (158.000 | 42.427)b (157.000 | 42.628)b (156.000 | 42.829)b (155.000 | 47.830)b (153.000 | 47.830)b (152.000 | 48.031)b (150.000 | 48.031)b (148.000 | 48.031)b (146.000 | 48.237)b (144.000 | 48.639)b (142.000 | 49.041)b (140.000 | 49.443)b (139.000 | 58.233)b (138.000 | 58.434)b (136.000 | 63.837)b (134.000 | 64.038)b (132.000 | 64.440)b (130.000 | 64.842)b (128.000 | 65.244)b (126.000 | 65.646)b (125.000 | 70.647)b (124.000 | 75.050)b (123.000 | 79.252)b (122.000 | 79.453)b (121.000 | 83.655)b (120.000 | 83.856)b (119.000 | 88.058)b (118.000 | 88.058)b (117.000 | 92.059)b (116.000 | 92.260)b (115.000 | 96.462)b (114.000 | 96.663)b (113.000 | 100.865)b (112.000 | 101.066)b (111.000 | 105.268)b (110.000 | 105.469)b (109.000 | 109.671)b (108.000 | 109.872)b (107.000 | 113.873)b (106.000 | 114.074)b (105.000 | 118.276)b (104.000 | 122.277)b (103.000 | 127.278)b (102.000 | 140.481)b (99.000 | 140.682)b (98.000 | 167.489)b (97.000 | 176.692)b (96.000 | 176.893)b (95.000 | 181.096)b (94.000 | 181.096)b (93.000 | 185.097)b (92.000 | 189.298)b (91.000 | 193.501)b (90.000 | 197.702)b (89.000 | 209.906)b (88.000 | 222.310)b (86.000 | 230.513)
+Resorting to best-first search
+Running WA* with W = 5.000, not restarting with goal states
+b (181.000 | 8.000)b (181.000 | 4.000)b (180.000 | 8.000)b (179.000 | 8.000)b (178.000 | 8.000)b (177.000 | 8.000)b (176.000 | 8.000)b (175.000 | 8.000)b (174.000 | 8.000)b (172.000 | 19.404)b (170.000 | 31.808)b (168.000 | 43.212)b (166.000 | 53.616)b (164.000 | 64.020)b (163.000 | 64.020)b (162.000 | 64.020)b (161.000 | 64.020)b (160.000 | 64.020)b (158.000 | 84.425)b (156.000 | 94.829)b (154.000 | 105.233)b (152.000 | 115.637)b (150.000 | 126.041)b (148.000 | 136.445)b (146.000 | 145.849)b (144.000 | 154.253)b (142.000 | 172.658)b (140.000 | 181.062)b (138.000 | 189.466)b (136.000 | 197.870)b (134.000 | 215.275)b (132.000 | 223.679)b (130.000 | 232.083)b (128.000 | 240.487)b (126.000 | 248.891)b (124.000 | 267.296)b (122.000 | 275.700)b (120.000 | 284.104)b (118.000 | 292.508)b (116.000 | 300.912)b (114.000 | 309.316)b (112.000 | 317.720)b (110.000 | 326.124)b (108.000 | 334.528)b (106.000 | 352.933)b (104.000 | 361.337)b (102.000 | 369.741)b (100.000 | 378.145)b (98.000 | 386.549)b (96.000 | 394.953)b (94.000 | 411.358)b (94.000 | 409.358)b (94.000 | 408.358)b (94.000 | 407.358)b (94.000 | 407.358)b (92.000 | 424.763)b (92.000 | 422.762)b (92.000 | 420.762)b (92.000 | 419.762)b (92.000 | 417.762)

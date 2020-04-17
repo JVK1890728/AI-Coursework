@@ -1,0 +1,86 @@
+,,Number of literals: 28
+Constructing lookup tables: [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%]
+Post filtering unreachable actions:  [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%]
+(resources-stored egg dstrand) has a finite upper bound: [-inf,100.000]
+(resources-stored painkillers dstrand) has a finite upper bound: [-inf,50.000]
+(resources-stored egg dwaterloo) has a finite upper bound: [-inf,10.000]
+(resources-stored painkillers dwaterloo) has a finite upper bound: [-inf,5.000]
+(requires arraff egg) has a finite upper bound: [-inf,2.000]
+(requires arraff painkillers) has a finite upper bound: [-inf,1.000]
+(requires arben egg) has a finite upper bound: [-inf,1.000]
+(requires arben painkillers) has a finite upper bound: [-inf,6.000]
+(requires argiulio egg) has a finite upper bound: [-inf,4.000]
+(requires argiulio painkillers) has a finite upper bound: [-inf,8.000]
+(requires arseb egg) has a finite upper bound: [-inf,2.000]
+(requires arseb painkillers) has a finite upper bound: [-inf,1.000]
+(requires arjeffrey egg) has a finite upper bound: [-inf,1.000]
+(requires arjeffrey painkillers) has a finite upper bound: [-inf,6.000]
+(requires arzak egg) has a finite upper bound: [-inf,4.000]
+(requires arzak painkillers) has a finite upper bound: [-inf,8.000]
+(requires arjay egg) has a finite upper bound: [-inf,2.000]
+(requires arjay painkillers) has a finite upper bound: [-inf,3.000]
+(requires arkolling egg) has a finite upper bound: [-inf,2.000]
+(requires arkolling painkillers) has a finite upper bound: [-inf,1.000]
+(requires arcoles egg) has a finite upper bound: [-inf,1.000]
+(requires arcoles painkillers) has a finite upper bound: [-inf,6.000]
+(requires arkeppens egg) has a finite upper bound: [-inf,4.000]
+(requires arkeppens painkillers) has a finite upper bound: [-inf,8.000]
+(requires aragi egg) has a finite upper bound: [-inf,4.000]
+(requires aragi painkillers) has a finite upper bound: [-inf,8.000]
+Have identified that bigger values of (resources-stored egg dstrand) are preferable
+Have identified that bigger values of (resources-stored painkillers dstrand) are preferable
+Have identified that bigger values of (resources-stored egg dwaterloo) are preferable
+Have identified that bigger values of (resources-stored painkillers dwaterloo) are preferable
+Have identified that bigger values of (resources-stored egg vdan) are preferable
+Have identified that bigger values of (resources-stored painkillers vdan) are preferable
+Have identified that bigger values of (resources-stored egg vwilliam) are preferable
+Have identified that bigger values of (resources-stored painkillers vwilliam) are preferable
+Have identified that bigger values of (capacity vwilliam walking) are preferable
+Have identified that bigger values of (capacity vdan walking) are preferable
+Recognised a monotonic-change-induced limit on var12(requires arraff egg)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var13(requires arraff painkillers)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var14(requires arben egg)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var15(requires arben painkillers)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var16(requires argiulio egg)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var17(requires argiulio painkillers)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var18(requires arseb egg)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var19(requires arseb painkillers)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var20(requires arjeffrey egg)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var21(requires arjeffrey painkillers)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var22(requires arzak egg)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var23(requires arzak painkillers)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var24(requires arjay egg)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var25(requires arjay painkillers)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var26(requires arkolling egg)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var27(requires arkolling painkillers)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var28(requires arcoles egg)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var29(requires arcoles painkillers)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var30(requires arkeppens egg)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var31(requires arkeppens painkillers)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var32(requires aragi egg)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var33(requires aragi painkillers)
+- Must be >= 0.000
+None of the ground temporal actions in this problem have been recognised as compression-safe
+Initial heuristic = 196.000, admissible cost estimate 0.000
+b (195.000 | 7.000)b (194.000 | 10.000)b (193.000 | 14.202)b (192.000 | 21.203)b (191.000 | 22.404)b (190.000 | 22.404)b (189.000 | 30.203)b (188.000 | 31.404)b (187.000 | 37.609)b (186.000 | 38.811)b (185.000 | 52.609)b (184.000 | 53.811)b (183.000 | 54.014)b (182.000 | 55.216)b (181.000 | 69.420)b (180.000 | 70.623)b (179.000 | 75.015)b (178.000 | 76.217)b (177.000 | 84.827)b (176.000 | 86.029)b (175.000 | 97.421)b (174.000 | 108.624)b (173.000 | 108.624)b (172.000 | 108.624)b (171.000 | 115.637)b (170.000 | 115.838)b (169.000 | 122.839)b (168.000 | 123.040)b (167.000 | 137.243)b (166.000 | 138.445)b (165.000 | 139.828)b (164.000 | 140.029)b (163.000 | 152.031)b (162.000 | 152.232)b (161.000 | 153.850)b (160.000 | 155.052)b (158.000 | 162.456)b (157.000 | 169.458)b (156.000 | 169.659)b (155.000 | 176.436)
