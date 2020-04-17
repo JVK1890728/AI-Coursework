@@ -2,8 +2,8 @@ cd /home/k1890728/Documents/00-Year-2/AI-Coursework/
 cd /store/nms_informatics_research/planning/planners
 
 PROBLEM 1
-./optic-cplex /home/k1890728/Documents/00-Year-2/AI-Coursework/volunteerPlanner.pddl /home/k1890728/Documents/00-Year-2/AI-Coursework/problem1.pddl > /home/k1890728/Documents/00-Year-2/AI-Coursework/problem1.plan
-./validate /home/k1890728/Documents/00-Year-2/AI-Coursework/volunteerPlanner.pddl /home/k1890728/Documents/00-Year-2/AI-Coursework/problem1.pddl /home/k1890728/Documents/00-Year-2/AI-Coursework/problem1.plan
+./optic-cplex /home/k1890728/Documents/00-Year-2/AI-Coursework/volunteerPlanner.pddl /home/k1890728/Documents/00-Year-2/AI-Coursework/problem1.pddl > /home/k1890728/Documents/00-Year-2/AI-Coursework/solution1.txt
+./validate /home/k1890728/Documents/00-Year-2/AI-Coursework/volunteerPlanner.pddl /home/k1890728/Documents/00-Year-2/AI-Coursework/problem1.pddl /home/k1890728/Documents/00-Year-2/AI-Coursework/solution1.txt
 
 PROBLEM 2
 ./optic-cplex /home/k1890728/Documents/00-Year-2/AI-Coursework/volunteerPlanner.pddl /home/k1890728/Documents/00-Year-2/AI-Coursework/problem2.pddl > /home/k1890728/Documents/00-Year-2/AI-Coursework/problem1.plan
@@ -17,4 +17,3 @@ PROBLEM 4
 PROBLEM 5
 ./optic-cplex /home/k1890728/Documents/00-Year-2/AI-Coursework/volunteerPlanner.pddl /home/k1890728/Documents/00-Year-2/AI-Coursework/problem5.pddl > /home/k1890728/Documents/00-Year-2/AI-Coursework/problem1.plan
 
-NZedtTg
