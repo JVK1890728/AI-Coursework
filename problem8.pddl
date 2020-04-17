@@ -14,6 +14,7 @@
 
     (at vWilliam dStrand)
     (= (activePeriod vWilliam) 100)
+    (= (remainingActivePeriod vWilliam) 100)
     (available vWilliam)
     (usingTransport vWilliam walking)
     (= (capacity vWilliam walking) 10)
