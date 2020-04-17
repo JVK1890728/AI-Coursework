@@ -1,36 +1,27 @@
 ;Volunteer Planner
+; TODO: update all fluents and durations to make sense
 
 (define (domain volunteerPlanner)
 
-;remove requirements that are not needed
-; TODO remove unutilised types
 (:requirements :fluents :durative-actions :typing :duration-inequalities :equality)
 
-(:types ;todo: enumerate types and their hierarchy here, e.g. car truck bus - vehicle
+(:types 
     locatable - object
     volunteer atRiskPerson depot - locatable
     modeOfTravel
     resource
 )
 
-; un-comment following line if constants are needed
-;(:constants )
 
-(:predicates ;todo: define predicates here
+(:predicates 
     (at ?obj - locatable ?l - locatable)
     (linked ?l1 ?l2 - locatable)
     (usingTransport ?v - volunteer ?m - modeOfTravel)
-    (walk ?v - volunteer)
-    (satisfied ?p - atRiskPerson)
     (available ?v - volunteer)
-    (full ?v - volunteer)
-    (emptyVolunteer ?v - volunteer)
-    (emptyDepot ?d - depot)
-    (onBike ?v - volunteer ?m - modeOfTravel) 
 )
-;(hasResource ?v - volunteer ?r - resource)
 
-(:functions ;todo: define numeric functions here
+
+(:functions
     (time-to-arrive ?from ?to - locatable ?mode - modeOfTravel)
     (requires ?p - atRiskPerson ?r - resource)
     (resources-stored ?r - resource ?obj - locatable)
@@ -39,7 +30,6 @@
     (activePeriod ?v - volunteer)
 )
 
-;define actions here
 (:durative-action PICK-UP-RESOURCE
     :parameters (?v - volunteer ?m - modeOfTravel ?r - resource ?d - depot)
     :duration (= ?duration 0.2)
@@ -102,8 +92,6 @@
 
 (:durative-action TRANSFER-RESOURCE
     :parameters (?v1 ?v2 - volunteer ?m1 ?m2 - modeOfTravel ?r - resource ?l - locatable)
-    ; might be a good idea to make this take
-    ; longer than getting it from a depot, iunno
     :duration (= ?duration 0.4)
     :condition (and
         (at start (available ?v1))
