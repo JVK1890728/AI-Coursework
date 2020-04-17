@@ -27,6 +27,8 @@
     (available vDan)
     (usingTransport vWilliam walking)
     (usingTransport vDan walking)
+    (= (activePeriod vWilliam) 60)
+    (= (activePeriod vDan) 60)
 
     (= (capacity vWilliam walking) 10)
     (= (capacity vWilliam cycling) 6)
