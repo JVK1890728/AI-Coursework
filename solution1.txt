@@ -1,0 +1,257 @@
+,Number of literals: 4
+Constructing lookup tables: [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%] [110%]
+Post filtering unreachable actions:  [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%] [110%]
+(resources-stored egg dstrand) has a finite upper bound: [-inf,100.000]
+(resources-stored painkillers dstrand) has a finite upper bound: [-inf,50.000]
+(capacity vwilliam cycling) has finite bounds: [6.000,6.000]
+(requires arraff egg) has a finite upper bound: [-inf,2.000]
+(requires arraff painkillers) has a finite upper bound: [-inf,1.000]
+(requires arben egg) has a finite upper bound: [-inf,1.000]
+(requires arben painkillers) has a finite upper bound: [-inf,6.000]
+Have identified that bigger values of (resources-stored egg dstrand) are preferable
+Have identified that bigger values of (resources-stored painkillers dstrand) are preferable
+Have identified that bigger values of (capacity vwilliam walking) are preferable
+Have identified that bigger values of (resources-stored egg vwilliam) are preferable
+Have identified that bigger values of (resources-stored painkillers vwilliam) are preferable
+Recognised a monotonic-change-induced limit on var7(requires arraff egg)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var8(requires arraff painkillers)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var9(requires arben egg)
+- Must be >= 0.000
+Recognised a monotonic-change-induced limit on var10(requires arben painkillers)
+- Must be >= 0.000
+None of the ground temporal actions in this problem have been recognised as compression-safe
+Initial heuristic = 28.000, admissible cost estimate 0.000
+b (27.000 | 10.000)b (26.000 | 20.202)b (25.000 | 30.203)b (24.000 | 40.405)b (23.000 | 50.406)b (22.000 | 50.607)b (21.000 | 70.810)b (20.000 | 87.013)b (19.000 | 99.618)b (18.000 | 99.819)b (17.000 | 115.821)b (16.000 | 116.022)b (15.000 | 126.023)b (14.000 | 126.224)b (13.000 | 136.225)b (12.000 | 142.427)b (11.000 | 158.630)b (10.000 | 168.832)b (9.000 | 174.833)b (8.000 | 181.035)b (7.000 | 187.036)b (6.000 | 187.036)b (4.000 | 187.237)b (2.000 | 209.642)(G)
+; No metric specified - using makespan
+
+; Plan found with metric 222.046
+; States evaluated so far: 197
+; States pruned based on pre-heuristic cost lower bound: 0
+; Time 0.27
+0.000: (travel vwilliam dstrand arraff walking)  [10.000]
+10.001: (travel vwilliam arraff dstrand walking)  [10.000]
+20.002: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+20.203: (travel vwilliam dstrand arraff walking)  [10.000]
+30.204: (travel vwilliam arraff dstrand walking)  [10.000]
+40.205: (pick-up-resource vwilliam walking egg dstrand)  [0.200]
+40.406: (travel vwilliam dstrand arraff walking)  [10.000]
+50.407: (deliver-resource vwilliam walking egg arraff)  [0.200]
+50.608: (travel vwilliam arraff dstrand walking)  [10.000]
+60.609: (pick-up-resource vwilliam walking egg dstrand)  [0.200]
+60.810: (travel vwilliam dstrand arraff walking)  [10.000]
+70.811: (travel vwilliam arraff dstrand walking)  [10.000]
+80.812: (travel vwilliam dstrand arben walking)  [6.000]
+86.813: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+87.014: (deliver-resource vwilliam walking egg arben)  [0.200]
+87.215: (travel vwilliam arben dstrand walking)  [6.000]
+93.216: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+93.417: (pick-up-resource vwilliam walking egg dstrand)  [0.200]
+93.618: (travel vwilliam dstrand arben walking)  [6.000]
+99.619: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+99.820: (rest vwilliam)  [10.000]
+109.821: (travel vwilliam arben dstrand walking)  [6.000]
+115.822: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+116.023: (travel vwilliam dstrand arraff walking)  [10.000]
+126.024: (deliver-resource vwilliam walking egg arraff)  [0.200]
+126.225: (travel vwilliam arraff dstrand walking)  [10.000]
+136.226: (travel vwilliam dstrand arben walking)  [6.000]
+142.227: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+142.428: (travel vwilliam arben dstrand walking)  [6.000]
+148.429: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+148.630: (travel vwilliam dstrand arraff walking)  [10.000]
+158.631: (deliver-resource vwilliam walking painkillers arraff)  [0.200]
+158.832: (travel vwilliam arraff dstrand walking)  [10.000]
+168.833: (travel vwilliam dstrand arben walking)  [6.000]
+174.834: (travel vwilliam arben dstrand walking)  [6.000]
+180.835: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+181.036: (travel vwilliam dstrand arben walking)  [6.000]
+187.037: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+187.238: (rest vwilliam)  [10.000]
+197.239: (travel vwilliam arben dstrand walking)  [6.000]
+203.240: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+203.441: (travel vwilliam dstrand arben walking)  [6.000]
+209.442: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+209.643: (travel vwilliam arben dstrand walking)  [6.000]
+215.644: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+215.845: (travel vwilliam dstrand arben walking)  [6.000]
+221.846: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+
+ * All goal deadlines now no later than 222.046
+
+Resorting to best-first search
+Running WA* with W = 5.000, not restarting with goal states
+b (27.000 | 6.000)b (26.000 | 0.200)b (25.000 | 10.201)b (25.000 | 6.201)b (24.000 | 0.401)b (23.000 | 10.402)b (23.000 | 6.402)b (22.000 | 10.603)b (22.000 | 6.603)b (21.000 | 20.805)b (20.000 | 27.006)b (20.000 | 21.207)b (19.000 | 27.208)b (18.000 | 21.408)b (17.000 | 27.409)b (16.000 | 21.609)b (15.000 | 27.610)b (14.000 | 27.610)b (12.000 | 27.811)b (10.000 | 28.012)b (8.000 | 40.416)b (6.000 | 40.818)b (4.000 | 53.222)b (2.000 | 53.623)(G)
+; No metric specified - using makespan
+
+; Plan found with metric 66.028
+; States evaluated so far: 487
+; States pruned based on pre-heuristic cost lower bound: 0
+; Time 0.56
+0.000: (pick-up-resource vwilliam walking egg dstrand)  [0.200]
+0.201: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+0.402: (pick-up-resource vwilliam walking egg dstrand)  [0.200]
+0.603: (travel vwilliam dstrand arraff walking)  [10.000]
+10.604: (deliver-resource vwilliam walking egg arraff)  [0.200]
+10.805: (deliver-resource vwilliam walking painkillers arraff)  [0.200]
+11.006: (deliver-resource vwilliam walking egg arraff)  [0.200]
+11.207: (travel vwilliam arraff dstrand walking)  [10.000]
+21.208: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+21.409: (pick-up-resource vwilliam walking egg dstrand)  [0.200]
+21.610: (travel vwilliam dstrand arben walking)  [6.000]
+27.611: (deliver-resource vwilliam walking egg arben)  [0.200]
+27.812: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+28.013: (travel vwilliam arben dstrand walking)  [6.000]
+34.014: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+34.215: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+34.416: (travel vwilliam dstrand arben walking)  [6.000]
+40.417: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+40.618: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+40.819: (travel vwilliam arben dstrand walking)  [6.000]
+46.820: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+47.021: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+47.222: (travel vwilliam dstrand arben walking)  [6.000]
+53.223: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+53.424: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+53.625: (travel vwilliam arben dstrand walking)  [6.000]
+59.626: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+59.827: (travel vwilliam dstrand arben walking)  [6.000]
+65.828: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+
+ * All goal deadlines now no later than 66.028
+b (0.000 | 66.028)(G)
+; No metric specified - using makespan
+
+; Plan found with metric 54.026
+; States evaluated so far: 728
+; States pruned based on pre-heuristic cost lower bound: 67
+; Time 0.92
+0.000: (pick-up-resource vwilliam walking egg dstrand)  [0.200]
+0.201: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+0.402: (pick-up-resource vwilliam walking egg dstrand)  [0.200]
+0.603: (travel vwilliam dstrand arraff walking)  [10.000]
+10.604: (deliver-resource vwilliam walking egg arraff)  [0.200]
+10.805: (deliver-resource vwilliam walking painkillers arraff)  [0.200]
+11.006: (deliver-resource vwilliam walking egg arraff)  [0.200]
+11.207: (travel vwilliam arraff dstrand walking)  [10.000]
+21.208: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+21.409: (pick-up-resource vwilliam walking egg dstrand)  [0.200]
+21.610: (travel vwilliam dstrand arben walking)  [6.000]
+27.611: (deliver-resource vwilliam walking egg arben)  [0.200]
+27.812: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+28.013: (travel vwilliam arben dstrand walking)  [6.000]
+34.014: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+34.215: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+34.416: (travel vwilliam dstrand arben walking)  [6.000]
+40.417: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+40.618: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+40.819: (travel vwilliam arben dstrand walking)  [6.000]
+46.820: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+47.021: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+47.222: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+47.423: (travel vwilliam dstrand arben walking)  [6.000]
+53.424: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+53.625: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+53.826: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+
+ * All goal deadlines now no later than 54.026
+b (0.000 | 54.026)(G)
+; No metric specified - using makespan
+
+; Plan found with metric 42.024
+; States evaluated so far: 2516
+; States pruned based on pre-heuristic cost lower bound: 609
+; Time 3.44
+0.000: (pick-up-resource vwilliam walking egg dstrand)  [0.200]
+0.201: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+0.402: (pick-up-resource vwilliam walking egg dstrand)  [0.200]
+0.603: (travel vwilliam dstrand arraff walking)  [10.000]
+10.604: (deliver-resource vwilliam walking egg arraff)  [0.200]
+10.805: (deliver-resource vwilliam walking painkillers arraff)  [0.200]
+11.006: (deliver-resource vwilliam walking egg arraff)  [0.200]
+11.207: (travel vwilliam arraff dstrand walking)  [10.000]
+21.208: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+21.409: (pick-up-resource vwilliam walking egg dstrand)  [0.200]
+21.610: (travel vwilliam dstrand arben walking)  [6.000]
+27.611: (deliver-resource vwilliam walking egg arben)  [0.200]
+27.812: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+28.013: (travel vwilliam arben dstrand walking)  [6.000]
+34.014: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+34.215: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+34.416: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+34.617: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+34.818: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+35.019: (travel vwilliam dstrand arben walking)  [6.000]
+41.020: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+41.221: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+41.422: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+41.623: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+41.824: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+
+ * All goal deadlines now no later than 42.024
+b (0.000 | 42.024)(G)
+; No metric specified - using makespan
+
+; Plan found with metric 30.022
+; States evaluated so far: 11067
+; States pruned based on pre-heuristic cost lower bound: 3339
+; Time 15.42
+0.000: (pick-up-resource vwilliam walking egg dstrand)  [0.200]
+0.201: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+0.402: (pick-up-resource vwilliam walking egg dstrand)  [0.200]
+0.603: (travel vwilliam dstrand arraff walking)  [10.000]
+10.604: (deliver-resource vwilliam walking egg arraff)  [0.200]
+10.805: (deliver-resource vwilliam walking painkillers arraff)  [0.200]
+11.006: (deliver-resource vwilliam walking egg arraff)  [0.200]
+11.207: (travel vwilliam arraff dstrand walking)  [10.000]
+21.208: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+21.409: (pick-up-resource vwilliam walking egg dstrand)  [0.200]
+21.610: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+21.811: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+22.012: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+22.213: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+22.414: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+22.615: (travel vwilliam dstrand arben walking)  [6.000]
+28.616: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+28.817: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+29.018: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+29.219: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+29.420: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+29.621: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+29.822: (deliver-resource vwilliam walking egg arben)  [0.200]
+
+ * All goal deadlines now no later than 30.022
+b (0.000 | 30.022)(G)
+; No metric specified - using makespan
+
+; Plan found with metric 26.022
+; States evaluated so far: 74096
+; States pruned based on pre-heuristic cost lower bound: 16142
+; Time 94.20
+0.000: (pick-up-resource vwilliam walking egg dstrand)  [0.200]
+0.201: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+0.402: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+0.603: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+0.804: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+1.005: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+1.206: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+1.407: (travel vwilliam dstrand arben walking)  [6.000]
+7.408: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+7.609: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+7.810: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+8.011: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+8.212: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+8.413: (deliver-resource vwilliam walking painkillers arben)  [0.200]
+8.614: (deliver-resource vwilliam walking egg arben)  [0.200]
+8.815: (travel vwilliam arben dstrand walking)  [6.000]
+14.816: (pick-up-resource vwilliam walking painkillers dstrand)  [0.200]
+15.017: (pick-up-resource vwilliam walking egg dstrand)  [0.200]
+15.218: (pick-up-resource vwilliam walking egg dstrand)  [0.200]
+15.419: (travel vwilliam dstrand arraff walking)  [10.000]
+25.420: (deliver-resource vwilliam walking egg arraff)  [0.200]
+25.621: (deliver-resource vwilliam walking painkillers arraff)  [0.200]
+25.822: (deliver-resource vwilliam walking egg arraff)  [0.200]
+
+ * All goal deadlines now no later than 26.022
+b (0.000 | 26.022)
