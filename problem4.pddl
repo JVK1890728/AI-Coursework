@@ -6,41 +6,44 @@
     arKolling arColes arKeppens arAgi - atRiskPerson
     dStrand dWaterloo - depot
     egg painkillers - resource
-    walking cycling - modeOfTravel
+    walking - modeOfTravel
 )
 
 (:init
+    ; resources
     (= (resource-size egg) 0.2)
     (= (resource-size painkillers) 0.4)
 
+    ; depots
     (= (resources-stored egg dStrand) 100)
     (= (resources-stored painkillers dStrand) 50)
     (= (resources-stored egg dWaterloo) 10)
     (= (resources-stored painkillers dWaterloo) 5)
-    (= (resources-stored egg vDan) 0)
-    (= (resources-stored painkillers vDan) 0)
-    (= (resources-stored egg vWilliam) 0)
-    (= (resources-stored painkillers vWilliam) 0)
+
 
     ; volunteers 
     (at vWilliam dStrand)
-    (at vDan dWaterloo)
     (available vWilliam)
-    (available vDan)
     (usingTransport vWilliam walking)
-    (usingTransport vDan walking)
     (= (capacity vWilliam walking) 10)
+    (= (activePeriod vWilliam) 100)
+    (= (resources-stored egg vWilliam) 0)
+    (= (resources-stored painkillers vWilliam) 0)
+
+    (at vDan dWaterloo)
+    (available vDan)
+    (usingTransport vDan walking)
     (= (capacity vDan walking) 10)
     (= (activePeriod vDan) 100)
-    (= (activePeriod vWilliam) 100)
+    (= (resources-stored egg vDan) 0)
+    (= (resources-stored painkillers vDan) 0)
 
+    ; links
     ; depot links
     (linked dWaterloo dStrand)
     (linked dStrand dWaterloo)
     (= (time-to-arrive dWaterloo dStrand walking) 20)
     (= (time-to-arrive dStrand dWaterloo walking) 20)
-    (= (time-to-arrive dWaterloo dStrand cycling) 7)
-    (= (time-to-arrive dStrand dWaterloo cycling) 7)
     
     ; cluster 1
     ; cluster 1 requirements
