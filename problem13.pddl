@@ -68,7 +68,7 @@
     (= (time-to-arrive ar7 dStrand walking) 7)
 
     ; requirements
-    (= (requires ar8 egg) 5)
+    (= (requires ar8 egg) 2)
     (= (requires ar8 painkillers) 10)
     (= (requires ar7 egg) 2)
     (= (requires ar7 painkillers) 5)
