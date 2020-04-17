@@ -22,7 +22,7 @@
     (= (activePeriod v1) 100)
     (= (remainingActivePeriod v1) 100)
     (usingTransport v1 walking)
-    (= (capacity v1 walking) 10)
+    (= (capacity v1 walking) 20)
     (= (resources-stored egg v1) 0)
     (= (resources-stored painkillers v1) 0)
 
