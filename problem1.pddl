@@ -20,6 +20,7 @@
     (at vWilliam dStrand)
     (available vWilliam)
     (= (activePeriod vWilliam) 100)
+    (= (remainingActivePeriod vWilliam) 100)
     (usingTransport vWilliam walking)
     (= (capacity vWilliam walking) 10)
     (= (resources-stored egg vWilliam) 0)
