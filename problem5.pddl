@@ -9,7 +9,56 @@
 )
 
 (:init
-    ; define map
+    ; resources
+    (= (resource-size resource1) 0.6)
+    (= (resource-size resource2) 0.2)
+    (= (resource-size resource3) 1.5)
+
+    ; depots
+    (= (resources-stored resource1 depot1) 15)
+    (= (resources-stored resource2 depot1) 9)
+    (= (resources-stored resource3 depot1) 0)
+    
+    (= (resources-stored resource1 depot2) 2)
+    (= (resources-stored resource2 depot2) 17)
+    (= (resources-stored resource3 depot2) 11)
+    
+    (= (resources-stored resource1 depot3) 6)
+    (= (resources-stored resource2 depot3) 5)
+    (= (resources-stored resource3 depot3) 16)
+    ; total for resource1 is 23
+    ; total for resource2 is 31
+    ; total for resource3 is 27
+
+    ; volunteers
+    (available volunteer1)
+    (at volunteer3 depot1)
+    (usingTransport volunteer1 walking)
+    (= (capacity volunteer1 walking) 7)
+    (= (activePeriod volunteer1) 40)
+    (= (resources-stored resource1 volunteer1) 0)
+    (= (resources-stored resource2 volunteer1) 0)
+    (= (resources-stored resource3 volunteer1) 0)
+    
+    (available volunteer2)
+    (at volunteer2 arPerson3)
+    (usingTransport volunteer2 walking)
+    (= (capacity volunteer2 walking) 11)
+    (= (activePeriod volunteer2) 70)
+    (= (resources-stored resource1 volunteer2) 0)
+    (= (resources-stored resource2 volunteer2) 0)
+    (= (resources-stored resource3 volunteer2) 0)
+    
+    (available volunteer3)
+    (at volunteer3 arPerson3)
+    (usingTransport volunteer3 walking)
+    (= (capacity volunteer3 walking) 5.5)
+    (= (activePeriod volunteer3) 50)
+    (= (resources-stored resource1 volunteer3) 0)
+    (= (resources-stored resource2 volunteer3) 0)
+    (= (resources-stored resource3 volunteer3) 0)
+
+    ; links
     (linked arPerson1 arPerson2)
     (linked arPerson2 arPerson1)
     (= (time-to-arrive arPerson1 arPerson2 walking) 10)
@@ -55,24 +104,8 @@
     (= (time-to-arrive depot3 depot2 walking) 4)
     (= (time-to-arrive depot2 depot3 walking) 4)
     
-    ; define depots
-    (= (resources-stored resource1 depot1) 15)
-    (= (resources-stored resource2 depot1) 9)
-    (= (resources-stored resource3 depot1) 0)
     
-    (= (resources-stored resource1 depot2) 2)
-    (= (resources-stored resource2 depot2) 17)
-    (= (resources-stored resource3 depot2) 11)
-    
-    (= (resources-stored resource1 depot3) 6)
-    (= (resources-stored resource2 depot3) 5)
-    (= (resources-stored resource3 depot3) 16)
-    ; total for resource1 is 23
-    ; total for resource2 is 31
-    ; total for resource3 is 27
-    
-    
-    ; define at risk people
+    ; requirements
     (= (requires arPerson1 resource1) 6)
     (= (requires arPerson1 resource2) 0)
     (= (requires arPerson1 resource3) 7)
@@ -92,44 +125,6 @@
     (= (requires arPerson5 resource1) 3)
     (= (requires arPerson5 resource2) 6)
     (= (requires arPerson5 resource3) 8)
-    ; total for resource1 is 23
-    ; total for resource2 is 31
-    ; total for resource3 is 27
-    
-    
-    ; define resources
-    (= (resource-size resource1) 0.6)
-    (= (resource-size resource2) 0.2)
-    (= (resource-size resource3) 1.5)
-    
-    
-    ; define volunteers
-    (available volunteer1)
-    (at volunteer3 depot1)
-    (usingTransport volunteer1 walking)
-    (= (capacity volunteer1 walking) 7)
-    (= (activePeriod volunteer1) 40)
-    (= (resources-stored resource1 volunteer1) 0)
-    (= (resources-stored resource2 volunteer1) 0)
-    (= (resources-stored resource3 volunteer1) 0)
-    
-    (available volunteer2)
-    (at volunteer2 arPerson3)
-    (usingTransport volunteer2 walking)
-    (= (capacity volunteer2 walking) 11)
-    (= (activePeriod volunteer2) 70)
-    (= (resources-stored resource1 volunteer2) 0)
-    (= (resources-stored resource2 volunteer2) 0)
-    (= (resources-stored resource3 volunteer2) 0)
-    
-    (available volunteer3)
-    (at volunteer3 arPerson3)
-    (usingTransport volunteer3 walking)
-    (= (capacity volunteer3 walking) 5.5)
-    (= (activePeriod volunteer3) 50)
-    (= (resources-stored resource1 volunteer3) 0)
-    (= (resources-stored resource2 volunteer3) 0)
-    (= (resources-stored resource3 volunteer3) 0)
 )
 
 (:goal (and
