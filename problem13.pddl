@@ -13,8 +13,8 @@
     (= (resource-size painkillers) 0.4)
 
     ; depots
-    (= (resources-stored egg dStrand) 100)
-    (= (resources-stored painkillers dStrand) 50)
+    (= (resources-stored egg dStrand) 200)
+    (= (resources-stored painkillers dStrand) 100)
 
     ; volunteers
     (at v1 dStrand)
