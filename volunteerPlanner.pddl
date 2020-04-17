@@ -28,6 +28,7 @@
     (capacity ?v -volunteer ?mode - modeOfTravel)
     (resource-size ?r - resource)
     (activePeriod ?v - volunteer)
+    (remainingActivePeriod ?v - volunteer)
 )
 
 (:durative-action PICK-UP-RESOURCE
@@ -35,7 +36,7 @@
     :duration (= ?duration 0.2)
     :condition (and 
         (at start (at ?v ?d))
-        (at start (> (activePeriod ?v) 0.2))
+        (at start (> (remainingActivePeriod ?v) 0.2))
         (at start (usingTransport ?v ?m))
         (at start (>= (capacity ?v ?m) (resource-size ?r)))
         (at start (>= (resources-stored ?r ?d) 1))
@@ -43,7 +44,7 @@
     )
     :effect (and
         (at start (not (available ?v)))
-        (at end (decrease (activePeriod ?v) 0.2))
+        (at end (decrease (remainingActivePeriod ?v) 0.2))
         (at end (decrease (resources-stored ?r ?d) 1))
         (at end (increase (resources-stored ?r ?v) 1))
         (at end (decrease (capacity ?v ?m) (resource-size ?r)))
@@ -56,14 +57,14 @@
     :duration (= ?duration 0.2)
     :condition (and
         (at start (at ?v ?p))
-        (at start (> (activePeriod ?v) 0.2))
+        (at start (> (remainingActivePeriod ?v) 0.2))
         (at start (usingTransport ?v ?m))
         (at start (>= (resources-stored ?r ?v) 1))
         (at start (available ?v))
     )
     :effect (and
         (at start (not (available ?v)))
-        (at end (decrease (activePeriod ?v) 0.2))
+        (at end (decrease (remainingActivePeriod ?v) 0.2))
         (at end (decrease (resources-stored ?r ?v) 1))
         (at end (decrease (requires ?p ?r) 1))
         (at end (increase (capacity ?v ?m) (resource-size ?r)))
@@ -75,7 +76,7 @@
     :parameters (?v - volunteer ?from ?to - locatable, ?mode - modeOfTravel)
     :duration (= ?duration (time-to-arrive ?from ?to ?mode))
     :condition (and
-        (at start (> (activePeriod ?v) (time-to-arrive ?from ?to ?mode)))
+        (at start (> (remainingActivePeriod ?v) (time-to-arrive ?from ?to ?mode)))
         (at start (at ?v ?from))
         (at start (usingTransport ?v ?mode))
         (at start (linked ?from ?to))
@@ -83,7 +84,7 @@
     )
     :effect (and
         (at start (not (available ?v)))
-        (at start (decrease (activePeriod ?v) (time-to-arrive ?from ?to ?mode)))
+        (at start (decrease (remainingActivePeriod ?v) (time-to-arrive ?from ?to ?mode)))
         (at end (not (at ?v ?from)))
         (at end (at ?v ?to))
         (at end (available ?v))
@@ -95,9 +96,9 @@
     :duration (= ?duration 0.4)
     :condition (and
         (at start (available ?v1))
-        (at start (> (activePeriod ?v1) 0.4))
+        (at start (> (remainingActivePeriod ?v1) 0.4))
         (at start (available ?v2))
-        (at start (> (activePeriod ?v2) 0.4))
+        (at start (> (remainingActivePeriod ?v2) 0.4))
         (at start (at ?v1 ?l))
         (at start (at ?v2 ?l))
         (at start (usingTransport ?v1 ?m1))
@@ -107,9 +108,9 @@
     )
     :effect (and
         (at start (not (available ?v1)))
-        (at end (decrease (activePeriod ?v1) 0.4))
+        (at end (decrease (remainingActivePeriod ?v1) 0.4))
         (at start (not (available ?v2)))
-        (at end (decrease (activePeriod ?v2) 0.4))
+        (at end (decrease (remainingActivePeriod ?v2) 0.4))
         (at end (decrease (resources-stored ?r ?v1) 1))
         (at end (increase (capacity ?v1 ?m1) (resource-size ?r)))
         (at end (increase (resources-stored ?r ?v2) 1))
@@ -123,12 +124,12 @@
     :parameters (?v - volunteer)
     :duration (= ?duration 10)
     :condition (and 
-        (at start (< (activePeriod ?v) 3)) 
+        (at start (< (remainingActivePeriod ?v) 3)) 
         (at start (available ?v))
     )
     :effect (and 
         (at start (not (available ?v)))
-        (at end (increase (activePeriod ?v) 80))
+        (at end (increase (remainingActivePeriod ?v) (activePeriod ?v)))
         (at end (available ?v))
     )
 )

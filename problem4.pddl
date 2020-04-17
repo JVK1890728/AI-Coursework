@@ -27,6 +27,7 @@
     (usingTransport vWilliam walking)
     (= (capacity vWilliam walking) 10)
     (= (activePeriod vWilliam) 100)
+    (= (remainingActivePeriod vWilliam) 100)
     (= (resources-stored egg vWilliam) 0)
     (= (resources-stored painkillers vWilliam) 0)
 
@@ -35,6 +36,7 @@
     (usingTransport vDan walking)
     (= (capacity vDan walking) 10)
     (= (activePeriod vDan) 100)
+    (= (remainingActivePeriod vDan) 100)
     (= (resources-stored egg vDan) 0)
     (= (resources-stored painkillers vDan) 0)
 

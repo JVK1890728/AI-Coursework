@@ -25,6 +25,7 @@
     (usingTransport vWilliam walking)
     (= (capacity vWilliam walking) 10)
     (= (activePeriod vWilliam) 60)
+    (= (remainingActivePeriod vWilliam) 60)
     (= (resources-stored egg vWilliam) 0)
     (= (resources-stored painkillers vWilliam) 0)
 
@@ -33,6 +34,7 @@
     (usingTransport vDan cycling)
     (= (capacity vDan cycling) 6)
     (= (activePeriod vDan) 60)
+    (= (remainingActivePeriod vDan) 60)
     (= (resources-stored egg vDan) 0)
     (= (resources-stored painkillers vDan) 0)
 
@@ -41,6 +43,7 @@
     (usingTransport vJeff driving)
     (= (capacity vJeff driving) 30)
     (= (activePeriod vJeff) 60)
+    (= (remainingActivePeriod vJeff) 60)
     (= (resources-stored egg vJeff) 0)
     (= (resources-stored painkillers vJeff) 0)
 
